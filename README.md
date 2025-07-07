@@ -44,7 +44,12 @@
 
 ---
 # Performance Video
-[![Ver video en YouTube](https://img.youtube.com/vi/tiNviJJKHCc/0.jpg)](https://www.youtube.com/watch?v=tiNviJJKHCc)
-
- 
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=tiNviJJKHCc">
+    <img src="https://img.youtube.com/vi/tiNviJJKHCc/0.jpg" width="45%" alt="Video 1">
+  </a>
+  <a href="https://www.youtube.com/watch?v=TICdiQSci_0">
+    <img src="https://img.youtube.com/vi/TICdiQSci_0/0.jpg" width="45%" alt="Video 2">
+  </a>
+</p>
   
