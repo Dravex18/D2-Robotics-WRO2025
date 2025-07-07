@@ -14,3 +14,7 @@
 ### El mejor en lo que hace
 ## David pechol
 ### El segundo mejor por que el primero es david
+
+---
+# Overview of our repository
+- `MODEL` - Aqui podras ver los printables de nuestro robot
