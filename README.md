@@ -12,7 +12,7 @@
 ---
 ## David Rico
 ### El mejor en lo que hace
-## David pechol
+## Davis peski
 ### El segundo mejor por que el primero es david
 
 ---
