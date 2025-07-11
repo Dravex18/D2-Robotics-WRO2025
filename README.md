@@ -44,6 +44,7 @@ Davis also leads the selection and integration of sensors, ensuring the robot ca
 - [📸 ](./V-PHOTOS)`V-PHOTOS` – Browse through **photos of the robot**. 
 - [😵 ](./T-PHOTOS)`T-PHOTOS` – All photos of the team (A rare look at **Davis under pressure** 😅???)  
 - [🎥](./VIDEO) `VIDEO` – Watch the **robot in action** in our demo video.
+- [📂](./OTHERS) `OTHERS` – Extra files and assets used in the development process.
 
 # Componetes
 ### a continuacion una lista de los comppnentes eseciales de nuestro robot:
