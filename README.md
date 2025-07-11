@@ -46,9 +46,13 @@ Davis also leads the selection and integration of sensors, ensuring the robot ca
 - [🎥](./VIDEO) `VIDEO` – Watch the **robot in action** in our demo video.
 - [📂](./OTHERS) `OTHERS` – Extra files and assets used in the development process.
 
-# Componetes
-### a continuacion una lista de los comppnentes eseciales de nuestro robot:
-| Componete | Imagen | Link  de compra |
+# 🔧 Robot Components
+Below is a complete breakdown of the electrical components that bring our robot to life. Every wire, sensor, and structural piece plays a key role in ensuring performance, precision, and reliability during competition.
+
+From custom-designed PCBs to 3D-printed parts and high-performance sensors, this list captures the core of what makes our robot smart, fast, and competition-ready.
+
+
+| component | Image | buy link |
 |--------------|--------------|--------------|
 | Raspberry Pi Pico   |  <img src="./OTHERS/Imagenes/pico.png" width="120"/>       | Link |
 | Raspberry Pi Zero 2w|  <img src="./OTHERS/Imagenes/pi zero2w.png" width="120"/>  | link |
@@ -61,13 +65,33 @@ Davis also leads the selection and integration of sensors, ensuring the robot ca
 | 3.7v Steren Battery |  <img src="./OTHERS/Imagenes/baterias.png" width="120"/>   | link |
 
 > **Note**  
-> For a more detailed explanation, go to the  by clicking here.[schemes README](./path/to/SCHEMES/README.md)
+> For a more detailed explanation of the circuit diagram, go to the `SCHEMES` folder by clicking [here](./SCHEMES).
+
 
 ---
 # Mobility Management
 
 ---
-# Power and Sense Management
+# 🔌 Power and Sensor Management
+
+For the power system, we aimed for a reliable and efficient energy supply. To achieve this, we used **two 3.7 V, 2800 mAh lithium batteries connected in series**, which allows us to maintain a stable voltage output over a longer period of time. These batteries supply power to the entire robot.
+
+A **boost converter** steps up the voltage to a constant **5 V**, which powers:
+- The **Raspberry Pi Pico**
+- The **Raspberry Pi Zero 2W**
+- The **drive and steering motors**
+
+The **analog voltage output from the Raspberry Pi Pico** is used to power:
+- **Ultrasonic sensors**
+- **MPU6050 IMU**
+
+The **TB6612 motor driver** requires two voltage levels:
+- A **3.3 V logic level** from the Raspberry Pi Pico
+- A **12 V supply** (boosted from the batteries) to power the motors
+
+The **camera module** is connected directly to the Raspberry Pi Zero 2W via its CSI interface.
+
+Due to the complexity of the wiring, we designed a **custom PCB**, which we had professionally manufactured in China. This resulted in a **clean, reliable, and fully functional** system with minimal cables.
 
 ---
 # Obstacle Mangemet
