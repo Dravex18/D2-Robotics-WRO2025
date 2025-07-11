@@ -40,10 +40,10 @@ Davis also leads the selection and integration of sensors, ensuring the robot ca
 
 - [📦 ](./MODEL) `MODEL`– 3D printable parts of the robot.  
 - [🧠 ](./SRC) `SRC`– Core code for the robot's logic.  
-- [📊 `SCHEMES`](./SCHEMES) – Circuit diagrams and schematics.  
-- [📸 `V-PHOTOS`](./V-PHOTOS) – Robot photos in action.  
-- [😵 `T-PHOTOS`](./T-PHOTOS) – Davis under stress.  
-- [🎥 `VIDEO`](./VIDEO) – Demo video of the robot.
+- [📊 ](./SCHEMES)`SCHEMES` – Circuit diagrams and schematics.  
+- [📸 ](./V-PHOTOS)`V-PHOTOS` – Robot photos in action.  
+- [😵 ](./T-PHOTOS)`T-PHOTOS` – Davis under stress.  
+- [🎥](./VIDEO) `VIDEO` – Demo video of the robot.
 
 # Componetes
 ### a continuacion una lista de los comppnentes eseciales de nuestro robot:
