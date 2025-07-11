@@ -49,7 +49,7 @@ Davis also leads the selection and integration of sensors, ensuring the robot ca
 ### a continuacion una lista de los comppnentes eseciales de nuestro robot:
 | Componete | Imagen | Link  de compra |
 |--------------|--------------|--------------|
-| servo | imagen | link |
+| Raspberry pi pico | ![Raspberry Pi Pico](./images/pico.png)| link |
 | motor|imagen | link |
 
 > **Note**  
