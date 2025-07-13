@@ -13,7 +13,7 @@ This repository contains all the code, documentation, and development resources 
 
 ---
 
-# Team Members
+# 🤖 Team Members
 
 ## David Rico
 
@@ -76,7 +76,7 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
 
 
 ---
-# Mobility Management
+# ⚙️ Mobility Management
 
 ---
 # 🔌 Power and Sensor Management
