@@ -87,7 +87,7 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
 ---
 # ⚙️ Mobility Management
 
-## 🧭 Direction System - Four Wheels Sterring
+## 🧭 Direction System - Four Wheels Steering
 
 For the steering system, our decision was based on the requirements of the **Obstacle Challenge**. We anticipated the need for very tight turns, so we opted for **four-wheel steering**. This configuration allows for a greater turning angle and improved precision   when maneuvering.
 
