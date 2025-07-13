@@ -54,15 +54,15 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
 
 | component | Image | buy link |
 |--------------|--------------|--------------|
-| Raspberry Pi Pico   |  <img src="./OTHERS/Imagenes/pico.png" width="120"/>       | Link |
-| Raspberry Pi Zero 2w|  <img src="./OTHERS/Imagenes/pi zero2w.png" width="120"/>  | link |
-| Raspberry Pi Camer 3|  <img src="./OTHERS/Imagenes/pi camer 3.jpg" width="120"/> | link |
-| N20 Motor           |  <img src="./OTHERS/Imagenes/motores.png" width="120"/>    | Link |
-| SG90 Servomotor     |  <img src="./OTHERS/Imagenes/servo.png" width="120"/>      | link |
-| HCR-05 Sensor       |  <img src="./OTHERS/Imagenes/ultrasonic.png" width="120"/> | link |
-| TB6612 Motor Contol |  <img src="./OTHERS/Imagenes/tb6612.jpg" width="120"/>     | Link |
-| MPU605 Gyroscope    |  <img src="./OTHERS/Imagenes/mpu6050.png" width="120"/>    | link |
-| 3.7v Steren Battery |  <img src="./OTHERS/Imagenes/baterias.png" width="120"/>   | link |
+| Raspberry Pi Pico   |  <img src="./OTHERS/Imagenes/pico.png" width="120"/>       | [🛒 Buy here!](https://www.amazon.com/dp/B0BDLHMQ9C)\ |
+| Raspberry Pi Zero 2w|  <img src="./OTHERS/Imagenes/pi zero2w.png" width="120"/>  | [🛒 Buy here!](https://www.amazon.com/dp/B0DRRRZBMP) |
+| Raspberry Pi Camer 3|  <img src="./OTHERS/Imagenes/pi camer 3.jpg" width="120"/> | [🛒 Buy here!](https://www.amazon.com/dp/B0C9PYCV9S) |
+| N20 Motor           |  <img src="./OTHERS/Imagenes/motores.png" width="120"/>    | [🛒 Buy here!](https://www.amazon.com/dp/B07FVRTWKV) |
+| SG90 Servomotor     |  <img src="./OTHERS/Imagenes/servo.png" width="120"/>      | [🛒 Buy here!](https://www.amazon.com/dp/B0DRHXGY4X) |
+| HC-SR04 Sensor      |  <img src="./OTHERS/Imagenes/ultrasonic.png" width="120"/> | [🛒 Buy here!](https://www.amazon.com/dp/B0B1MJJLJP) |
+| TB6612 Motor Contol |  <img src="./OTHERS/Imagenes/tb6612.jpg" width="120"/>     | [🛒 Buy here!](https://lcsc.com/product-detail/Brushed-DC-Motor-Drivers_TOSHIBA-TB6612FNG-O-C-8-EL_C88224.html) |
+| MPU605 Gyroscope    |  <img src="./OTHERS/Imagenes/mpu6050.png" width="120"/>    | [🛒 Buy here!](https://lcsc.com/product-detail/Attitude-Sensors_TDK-InvenSense-MPU-6050_C24112.html) |
+| 3.7v Steren Battery |  <img src="./OTHERS/Imagenes/baterias.png" width="120"/>   | [🛒 Buy here!](https://www.steren.com.pa/bateria-recargable-li-ion-2200-mah-tipo-18650.html) |
 
 > **Note**  
 > For a more detailed explanation of the circuit diagram, go to the `SCHEMES` folder by clicking [here](./SCHEMES).
