@@ -17,14 +17,21 @@ This repository contains all the code, documentation, and development resources 
 
 ## David Rico
 
-<div align="justify">
-
-David is a thoughtful and strategic member of the team who constantly strives to bring people together and keep the project on track. Passionate about baseball and always aiming to win, he brings a sharp mindset to both teamwork and technical challenges—though anime isn't really his thing.
-
-In the team, David leads the mechanical and electronic design, creating the robot chassis, 3D-printed parts, and custom PCBs. More than just building, he's responsible for planning the overall robot strategy, ensuring all components work together toward a clear goal. He also contributes significantly to project documentation, helping the team stay organized and aligned throughout the competition.
-
-</div>
-
+<table>
+  <tr>
+    <td style="width: 180px; vertical-align: top;">
+     <img src="OTHERS/Imagenes/imagen personal David.jpg" alt="David" width="600" style="float: left; margin-right: 20px;">
+    </td>
+    <td style="text-align: justify; padding-left: 20px;">
+      <p>
+        <strong>- David</strong> is a thoughtful and strategic member of the team who constantly strives to bring people together and keep the project on track. Passionate about baseball and always aiming to win, he brings a sharp mindset to both teamwork and technical challenges—though anime isn't really his thing.
+      </p>
+      <p>
+       <strong>-</strong> In the team, David leads the mechanical and electronic design, creating the robot chassis, 3D-printed parts, and custom PCBs. More than just building, he's responsible for planning the overall robot strategy, ensuring all components work together toward a clear goal. He also contributes significantly to project documentation, helping the team stay organized and aligned throughout the competition.
+      </p>
+    </td>
+  </tr>
+</table>
 
 ## Davis Peschl
 
