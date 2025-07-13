@@ -34,6 +34,21 @@ This repository contains all the code, documentation, and development resources 
 </table>
 
 ## Davis Peschl
+<table>
+  <tr>
+    <td style="width: 180px; vertical-align: top;">
+     <img src="OTHERS/Imagenes/imagen personal David.jpg" alt="David" width="600" style="float: left; margin-right: 20px;">
+    </td>
+    <td style="text-align: justify; padding-left: 20px;">
+      <p>
+        <strong>- Davis</strong> is a key problem-solver on the team, known for his strong logical thinking and focus on efficient solutions. He plays a central role in the programming of the robot and is responsible for defining the logical strategy that guides its behavior during the competition.
+      </p>
+      <p>
+       <strong>- Davis</strong> also leads the selection and integration of sensors, ensuring the robot can perceive and react to its environment accurately. In addition to his software contributions, he supports the team in the design of PCBs, as well as in the development of both electrical and mechanical components, making him a versatile and essential part of the team.
+      </p>
+    </td>
+  </tr>
+</table>
 
 <div align="justify">
 
