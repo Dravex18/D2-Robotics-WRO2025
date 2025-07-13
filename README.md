@@ -64,8 +64,8 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
 | MPU605 Gyroscope    |  <img src="./OTHERS/Imagenes/mpu6050.png" width="120"/>    | [🛒 Buy here!](https://lcsc.com/product-detail/Attitude-Sensors_TDK-InvenSense-MPU-6050_C24112.html) |
 | 3.7v Steren Battery |  <img src="./OTHERS/Imagenes/baterias.png" width="120"/>   | [🛒 Buy here!](https://www.steren.com.pa/bateria-recargable-li-ion-2200-mah-tipo-18650.html) |
 
-> **Note**  
-> For a more detailed explanation of the circuit diagram, go to the `SCHEMES` folder by clicking [here](./SCHEMES).
+> **Note 🔔**  
+> For an in-depth look at the circuit diagram, check out the SCHEMES folder by clicking [here](./SCHEMES).
 
 
 ---
