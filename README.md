@@ -52,12 +52,6 @@ This repository contains all the code, documentation, and development resources 
 
 <div align="justify">
 
-Davis is a key problem-solver on the team, known for his strong logical thinking and focus on efficient solutions. He plays a central role in the programming of the robot and is responsible for defining the logical strategy that guides its behavior during the competition.
-
-Davis also leads the selection and integration of sensors, ensuring the robot can perceive and react to its environment accurately. In addition to his software contributions, he supports the team in the design of PCBs, as well as in the development of both electrical and mechanical components, making him a versatile and essential part of the team.
-
-</div>
-
 #  📁 Repository Structure
 
 - [📦 ](./MODEL) `MODEL`– Find all the **3D printable parts** of our robot here.    
