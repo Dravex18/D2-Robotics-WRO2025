@@ -6,6 +6,10 @@
 </p>
 <div align="justify">
   
+[![YouTube](https://img.shields.io/badge/-YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/@Dravex_18)
+
+
+
 Welcome to the official repository of Team D2Robotics, a dedicated group of young engineers working to earn the opportunity to represent Panama at the World Robot Olympiad 2025, which will take place in Singapore. We are currently competing in the Future Engineers category and preparing for the national qualifiers with the goal of securing our spot on the international stage.
 
 This repository contains all the code, documentation, and development resources related to our robot project.
