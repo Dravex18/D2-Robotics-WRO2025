@@ -21,6 +21,9 @@ Over a three‑month period, we conducted exhaustive testing to optimize:
 
 The outcome is one of the most efficient and precise integrated drive‑and‑steering systems implemented in a four‑wheel vehicle.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/33eb4b2c-921f-4994-8330-f2ba8f8b8fe5" alt="YouTube Badge" />
+</p>
 
 
 
@@ -51,14 +54,7 @@ For 3D printing the Fusion 360–designed components, we employed a dual‑tech
     height="300" 
     alt="Resin Printing"
   </p>
-  
- <p align="center">
-  <img 
-    src="https://github.com/user-attachments/assets/586facc7-64be-4ea6-99b1-64d581032cc1" 
-    width="300" 
-    height="300" 
-    alt="FDM Printing"
-  </p>
+
 
 
 
@@ -101,22 +97,15 @@ For the wheels, we drew inspiration from this [pag](https://sites.google.com/vie
     width="300"
     height="300"
     alt="Wheel Foam Core"
-  >
-</p>
-
-
-
-
-<p align="center">
+    style="margin-right: 20px;"
+  />
   <img
     src="https://github.com/user-attachments/assets/197c7603-080b-4dba-9a85-a18217d9288d"
     width="300"
     height="300"
     alt="LLantas"
-  >
+  />
 </p>
-
-
 
 
 ---
