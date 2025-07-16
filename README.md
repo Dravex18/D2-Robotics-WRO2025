@@ -95,14 +95,21 @@ We use **SG90 servo motors** due to their low cost and minimal power consumption
 
 We developed an **independent steering system for each axle** (front and rear), which enables tight maneuvers with the designed configuration and significantly reduces time on the track, as shown in the following image:
 
+<div align="center">
+
 <img width="449" height="201" alt="Screenshot 2025-07-15 205336" src="https://github.com/user-attachments/assets/eede3cab-a019-464b-a151-1f4c20013af0" />
+
+</div>
 
 Since both axles are steerable, we needed to ensure that the **front axle turns in the opposite direction to the rear axle**, and vice versa.  
 To achieve this, we implemented a **basic four-gear system**, as shown in the image below.  
 This solution allowed us to complete a fully functional and synchronized steering system for the robot.
 
-![Dir up](https://github.com/user-attachments/assets/e3dc1a8e-3320-4297-9118-86c2c88e4430)
+<div align="center">
 
+<img src="https://github.com/user-attachments/assets/e3dc1a8e-3320-4297-9118-86c2c88e4430" width="450" height="350">  <img src="https://github.com/user-attachments/assets/46b94a1c-3623-486b-837a-a4b717c23469" width="500" height="800">
+
+</div>
 
 
 ## 🔧 Traction System – 4WD
@@ -113,9 +120,11 @@ This shaft is connected to a **custom differential**, which allows smoother and 
 
 Below is an image showcasing the full 4WD setup:
 
-<img width="449" height="201" alt="Screenshot 2025-07-15 205336" src="https://github.com/user-attachments/assets/eede3cab-a019-464b-a151-1f4c20013af0" />
+<div align="center">
 
+<img src="https://github.com/user-attachments/assets/c0fed424-c513-4c63-b985-9cb551a16fe3" width="450" height="400">
 
+</div>
 
 However, having both steering and traction on all four wheels introduced a major challenge:  
 **How to maintain traction while the robot is turning**.
@@ -125,8 +134,14 @@ This system ensures continuous traction even during sharp turns, greatly improvi
 
 Below, we present an image of the implemented system:
 
-------------------imagne
+<div align="center">
 
+<img src="https://github.com/user-attachments/assets/b96fd7d2-7241-4940-b722-c8c9533b87b5" width="450" height="400">
+
+</div>
+
+> **Note 🔔**  
+> You can view the robot in a **3D environment** [here](./MODEL), or see robot images [here](./V-PHOTOS).
 
 ---
 # 🔌 Power and Sensor Management
