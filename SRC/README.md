@@ -29,15 +29,14 @@ As the first step in our code, we import all the necessary libraries:
 
 
 <details open>
-<summary> ⚙️ Libraries
+<summary>⚙️ Libraries</summary>
 
-  ```cpp
-  #include <Arduino.h>
-  #include <Bounce2.h>
-  #include "Robot.h"
-  #include "PID.h"
-  #include <math.h>
-
+```cpp
+#include <Arduino.h>
+#include <Bounce2.h>
+#include "Robot.h"
+#include "PID.h"
+#include <math.h>
 ``` 
 </details>
 
@@ -47,7 +46,9 @@ As the first step in our code, we import all the necessary libraries:
 We then initialize the serial interface and call setup functions defined inside our custom libraries:
 
 <details open>
-<summary> ⚙️ SETUP
+<summary>⚙️ SETUP</summary>
+
+```cpp
   
  ```cpp
   void setup() {
@@ -70,7 +71,9 @@ Finally, the main loop is responsible for the robot's high-level behavior, inclu
 The logic is structured in four main steps, allowing the robot to progress through defined stages of the challenge.
 
 <details open>
-<summary> ⚙️ LOOP
+<summary>⚙️ LOOP </summary>
+
+
 
 ```cpp
 void loop() {
