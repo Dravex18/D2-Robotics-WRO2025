@@ -95,13 +95,14 @@ We use **SG90 servo motors** due to their low cost and minimal power consumption
 
 We developed an **independent steering system for each axle** (front and rear), which enables tight maneuvers with the designed configuration and significantly reduces time on the track, as shown in the following image:
 
------------imagen
+<img width="449" height="201" alt="Screenshot 2025-07-15 205336" src="https://github.com/user-attachments/assets/eede3cab-a019-464b-a151-1f4c20013af0" />
 
 Since both axles are steerable, we needed to ensure that the **front axle turns in the opposite direction to the rear axle**, and vice versa.  
 To achieve this, we implemented a **basic four-gear system**, as shown in the image below.  
 This solution allowed us to complete a fully functional and synchronized steering system for the robot.
 
----------------iamgen
+![Dir up](https://github.com/user-attachments/assets/e3dc1a8e-3320-4297-9118-86c2c88e4430)
+
 
 
 ## 🔧 Traction System – 4WD
@@ -112,7 +113,9 @@ This shaft is connected to a **custom differential**, which allows smoother and 
 
 Below is an image showcasing the full 4WD setup:
 
---------------imagne
+<img width="449" height="201" alt="Screenshot 2025-07-15 205336" src="https://github.com/user-attachments/assets/eede3cab-a019-464b-a151-1f4c20013af0" />
+
+
 
 However, having both steering and traction on all four wheels introduced a major challenge:  
 **How to maintain traction while the robot is turning**.
