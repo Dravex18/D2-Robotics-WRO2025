@@ -37,7 +37,7 @@ This repository contains all the code, documentation, and development resources 
 <table>
   <tr>
     <td style="width: 180px; vertical-align: top;">
-     <img src="OTHERS/Imagenes/imagen personal David.jpg" alt="David" width="700" style="float: left; margin-right: 20px;">
+     <img src="OTHERS/Imagenes/imagen personal Davis.jpg" alt="Davis" width="700" style="float: left; margin-right: 20px;">
     </td>
     <td style="text-align: justify; padding-left: 20px;">
       <p>
