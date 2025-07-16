@@ -144,31 +144,51 @@ Below, we present an image of the implemented system:
 > You can view the robot in a **3D environment** [here](./MODEL), or see robot images [here](./V-PHOTOS).
 
 ---
-# 🔌 Power and Sensor Management
 
-For the power system, we aimed for a reliable and efficient energy supply. To achieve this, we used **two 3.7 V, 2800 mAh lithium batteries connected in series**, which allows us to maintain a stable voltage output over a longer period of time. These batteries supply power to the entire robot.
+# 🔌 Power Management
 
-A **boost converter** steps up the voltage to a constant **5 V**, which powers:
-- The **Raspberry Pi Pico**
-- The **Raspberry Pi Zero 2W**
-- The **drive and steering motors**
+We designed the power system to be both reliable and efficient. The robot is powered by two 3.7 V, 2800 mAh li-on batteries connected in series, providing a stable voltage and sufficient capacity for extended operation.
+A boost converter increases the voltage to a constant 5 V, which supplies power to:
 
-The **analog voltage output from the Raspberry Pi Pico** is used to power:
-- **Ultrasonic sensors**
-- **MPU6050 IMU**
+-	The Raspberry Pi Pico
+-	The Raspberry Pi Zero 2W
+-	The drive and steering motors
+  
+Additionally, the TB6612 motor driver requires:
 
-The **TB6612 motor driver** requires two voltage levels:
-- A **3.3 V logic level** from the Raspberry Pi Pico
-- A **12 V supply** (boosted from the batteries) to power the motors
+-	A 3.3 V logic signal from the Raspberry Pi Pico
+-	A 12 V power supply, also boosted from the batteries
+  
+To simplify wiring and ensure a clean layout, we designed a custom PCB, professionally manufactured in China. This approach minimized cabling and improved system reliability.
 
-The **camera module** is connected directly to the Raspberry Pi Zero 2W via its CSI interface.
+# 📡 Sensing System
 
-Due to the complexity of the wiring, we designed a **custom PCB**, which we had professionally manufactured in China. This resulted in a **clean, reliable, and fully functional** system with minimal cables.
+The sensing system includes a variety of modules that allow the robot to perceive and respond to its environment with accuracy. These components are powered through regulated outputs from the microcontroller.
+The 3.3 V output from the Raspberry Pi Pico powers:
+
+- Ultrasonic sensors (HC-SR04) : Used to measure the distance to the wall and determine the appropriate setpoint the robot must maintain during operation.
+
+-	MPU6050 Inertial Measurement Unit (IMU): Used to maintain a constant heading and estimate the robot’s displacement along the track.
+  
+The camera module (Raspberry Pi Camera 3) connects directly to the Raspberry Pi Zero 2W via its CSI interface, handling visual input for navigation or object detection.
+
+This configuration ensures that all sensing elements operate consistently and efficiently, supporting the robot's autonomous capabilities.
+
 
 ---
 # Obstacle Mangment
 
 ## Open Challlenge
+para la priemrra ronda decidimos enfoocarnos en giros precisos, y correciones excepcionales, al no saber en que osicion y direccion debe ir el robot decidimos hacer una ruta lo mas pegado posible  la a pared exterior evitando asi cualquier tipo de muro que nos pueda tocar.
+Bsasamos nuestra estrategia en superar curvas, creamos una serie de pasos que el robot de tomar en cuenta para saber el radio de giro y la distancia, en un principio ibamos a usar un sensor ultrasonico frontal apra detectar cuanto se acercba a una curva, ero nos dimos cuenta que podias calcular el deszplasamiento del robot de manera muy precisa, juntando estos factores puede comppletar una curva de manera perfecta.
+aqui les mostramos un esquema de la serie de pasos .
+
+esquem ---------------------
+
+en el area denominada como "pasillo" usamos 2 puntos que nos 
+
+
+
 
 
 
