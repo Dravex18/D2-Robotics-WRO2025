@@ -560,10 +560,12 @@ It showcases the execution of key functionalities such as:
 - Color detection 
 
 📽️ Watch the videos:
-
+| OPEN CHALLENGE | OBSTACLE CHALLENGE |
+|--------------|--------------|
+|  [<img src="OTHERS/Imagenes/open.gif" width="45%" alt="Open Challenge Video">](https://www.youtube.com/watch?v=Ml1ZyXK22XI){:target="_blank"}   |  <img src="./OTHERS/Imagenes/pico.png" width="120"/>       | [🛒 Buy here!](https://www.amazon.com/dp/B0BDLHMQ9C)\ |
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=Ml1ZyXK22XI" target="_blank">
-    <img src="OTHERS/Imagenes/open.gif" width="45%" alt="Open Challenge Video">
+  <a >
+    
 </a>
   </a>
 <a href="https://www.youtube.com/watch?v=BL7dXvtKBQE" target="_blank">
