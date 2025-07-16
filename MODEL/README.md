@@ -25,6 +25,8 @@ The outcome is one of the most efficient and precise integrated drive‑and‑st
   <img src="https://github.com/user-attachments/assets/33eb4b2c-921f-4994-8330-f2ba8f8b8fe5" alt="YouTube Badge" />
 </p>
 
+> ## **Note 🔔**  
+> ### You can download the .step file from the root directory of the `model` folder.
 
 
 
