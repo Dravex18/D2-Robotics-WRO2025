@@ -560,9 +560,23 @@ It showcases the execution of key functionalities such as:
 - Color detection 
 
 📽️ Watch the videos:
-| OPEN CHALLENGE | OBSTACLE CHALLENGE |
-|--------------|--------------|
-|  [<img src="OTHERS/Imagenes/open.gif" width="45%" alt="Open Challenge Video">](https://www.youtube.com/watch?v=Ml1ZyXK22XI) |  [ <img src="OTHERS/Imagenes/OSTACLE.gif" width="45%" alt="Obstacle Challenge Video">]("https://www.youtube.com/watch?v=BL7dXvtKBQE)    |
 
+<table align="center">
+  <tr>
+    <th align="center">OPEN CHALLENGE</th>
+    <th align="center">OBSTACLE CHALLENGE</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=Ml1ZyXK22XI" target="_blank">
+        <img src="OTHERS/Imagenes/open.gif" width="300%" alt="Open Challenge Video">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=BL7dXvtKBQE" target="_blank">
+        <img src="OTHERS/Imagenes/OSTACLE.gif" width="300%" alt="Obstacle Challenge Video">
+      </a>
+    </td>
+  </tr>
+</table>
 
-  
