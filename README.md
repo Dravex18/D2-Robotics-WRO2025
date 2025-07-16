@@ -27,7 +27,7 @@ This repository contains all the code, documentation, and development resources 
         <strong>- David</strong> is a thoughtful and strategic member of the team who constantly strives to bring people together and keep the project on track. Passionate about baseball and always aiming to win, he brings a sharp mindset to both teamwork and technical challenges—though anime isn't really his thing.
       </p>
       <p>
-       <strong>-</strong> In the team, David leads the mechanical and electronic design, creating the robot chassis, 3D-printed parts, and custom PCBs. More than just building, he's responsible for planning the overall robot strategy, ensuring all components work together toward a clear goal. He also contributes significantly to project documentation, helping the team stay organized and aligned throughout the competition.
+       <strong>-</strong> In the team, David leads the mechanical and electronic design, creating the robot chassis, 3D-printed parts, and custom PCBs. More than just building, he's responsible for planning the overall robot strategy, ensuring all components work together towards a clear goal. He also contributes significantly to project documentation, helping the team stay organized and aligned throughout the competition.
       </p>
     </td>
   </tr>
@@ -166,7 +166,13 @@ The **camera module** is connected directly to the Raspberry Pi Zero 2W via its 
 Due to the complexity of the wiring, we designed a **custom PCB**, which we had professionally manufactured in China. This resulted in a **clean, reliable, and fully functional** system with minimal cables.
 
 ---
-# Obstacle Mangemet
+# Obstacle Mangment
+
+## Open Challlenge
+
+
+
+
 
 ---
 # Performance Video
