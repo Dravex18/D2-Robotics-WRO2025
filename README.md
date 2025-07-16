@@ -433,20 +433,141 @@ void loop() {
 
 ---
 
-## Second Round
+## 🏁 Second Round
+
+
+For the second round, we used the same steering system as in the first round, with a few critical modifications.
+
+Because the robot now starts from a designated parking zone, we leveraged the initial ultrasonic distance readings to determine the robot’s orientation and movement direction from the very beginning.
+
+After this, the track was divided into distinct lanes for better control and logic structuring.
+
+📊 [Insert "Exit from Parking" Diagram Here]
+
+Another key change involves curve handling. The set of target points used by the robot to follow a curve now varies depending on the lane it is in.
+
+This allowed us to create a lane-specific curve model, enabling the robot to detect all blocks across the track with minimal blind spots.
+
+This entire process repeats until the robot completes three full laps.
+
+After the final lap, the robot begins detecting the magenta color of the parking zone and finishes the round by aligning itself in parallel with the parking area.
+
+
+<details>
+<summary>🛣️ Obstacle Challenge Code</summary>
+
+For the obstacle challenge round, we used the same mobility system as in the first round. The only difference is that we activated the camera to detect and classify obstacles.
+
+As the first step, we import the necessary libraries.
+
+Due to the orientation of our robot, we inverted the captured image to correct its alignment.
+
+Additionally, we reduced the camera resolution (i.e., pixel count) to speed up image processing and enable faster response times.
+
+<details>
+<summary>⚙️ CONFIGURATION </summary>
+
+
+```cpp
+from picamera2 import Picamera2
+import cv2
+from datetime import datetime
+import numpy as np
+import serial
+
+picam2 = Picamera2()
+picam2.start()
+ser = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
+#mask_actual = masks["i"]
+
+----------------------------------------
+
+frame = picam2.capture_array()
+frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+frame_real = cv2.flip(frame, 0)  #rotamos la camara verticalmente
+frame_reducido = cv2.resize(frame_real, (0, 0), fx=0.2, fy=0.2) #redimenzionando la imagen
+    
+
+``` 
+</details>
 
 
 
+We implemented a mask-based detection system using OpenCV, coded in Python and running on the Raspberry Pi Zero 2W.
 
+This method allows us to calculate the average RGB color within a specified region of the image.
+
+The result is then compared to a set of predefined thresholds to determine whether or not a block is present in that region.
+<details>
+<summary>⚙️ MASK DECLARATION </summary>
+
+
+```cpp
+masks = {
+    "bd": ([80, 15], [120, 15], [120, 85], [80, 85]),
+    "bi": ([7, 15], [45, 15], [45, 85], [7, 85]),
+    "bcc": ([7, 15], [120, 15], [120, 85], [80, 85]),
+    "bcle": ([7, 15], [120, 15], [120, 85], [80, 85]),
+    "lcd": ([15, 0], [0, 15], [110, 95], [125, 80]),
+    "lci": ([110, 0], [125, 15], [15, 95], [0, 80]),
+    "i": ([0, 0], [125, 125], [95, 95], [80, 80]),
+}
+mask_actual = masks["i"]
+
+``` 
+</details>
+
+> **Note 🔔**  
+> The "i" mask is used as the default region and does not correspond to a specific detection zone.
+
+According to our strategy, the robot must know which region to analyze at each stage of the challenge.
+
+To accomplish this, the main Raspberry Pi Pico sends a request to the Raspberry Pi Zero 2W specifying the region to measure.
+
+The Zero 2W then processes that region and sends back the result via serial communication.
+
+<details>
+<summary>⚙️ UART COMUNICATION </summary>
+  
+```cpp
+ if ser.in_waiting > 0:
+        mensaje = ser.readline().decode().strip()
+        print("Dato recibido:", mensaje)
+        if mensaje in masks:
+            mask_actual = masks[mensaje]
+----------------------------------------------------
+ # Enviar el color por serial
+    ser.write(f"{color}\n".encode())
+
+``` 
+</details>
+
+</details>
 
 ---
-# Performance Video
+
+# 🎥 Performance Video
+
+This video demonstrates the complete performance of our robot during the competition.
+It showcases the execution of key functionalities such as:
+
+- Precise lane tracking and curve navigation
+
+- Obstacle avoidance using sensor feedback
+
+- Dynamic path correction based on environment inputs
+
+- Color detection 
+
+📽️ Watch the videos:
+
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=tiNviJJKHCc">
-    <img src="https://img.youtube.com/vi/tiNviJJKHCc/0.jpg" width="45%" alt="Video 1">
+  <a href="https://www.youtube.com/watch?v=Ml1ZyXK22XI" target="_blank">
+  <img src="https://img.youtube.com/vi/Ml1ZyXK22XI/0.jpg" width="45%" alt="Performance Video">
+</a>
   </a>
-  <a href="https://www.youtube.com/watch?v=TICdiQSci_0">
-    <img src="https://img.youtube.com/vi/TICdiQSci_0/0.jpg" width="45%" alt="Video 2">
-  </a>
+ <a href="https://www.youtube.com/watch?v=BL7dXvtKBQE" target="_blank">
+    <img src="https://img.youtube.com/vi/BL7dXvtKBQE/0.jpg" width="45%" alt="Performance Video">
+</a>
 </p>
   
