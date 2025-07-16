@@ -62,6 +62,10 @@ This repository contains all the code, documentation, and development resources 
 - [🎥](./VIDEO) `VIDEO` – Watch the **robot in action** in our demo video.
 - [📂](./OTHERS) `OTHERS` – Extra files and assets used in the development process.
 
+> # **Note 🔔**  
+> ## Please review each folder, as it contains important information that complements the project.
+
+
 # 🔧 Robot Components
 Below is a complete breakdown of the electrical components that bring our robot to life. Every wire, sensor, and structural piece plays a key role in ensuring performance, precision, and reliability during competition.
 
