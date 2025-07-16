@@ -566,8 +566,8 @@ It showcases the execution of key functionalities such as:
   <img src="https://img.youtube.com/vi/Ml1ZyXK22XI/0.jpg" width="45%" alt="Performance Video">
 </a>
   </a>
- <a href="https://www.youtube.com/watch?v=BL7dXvtKBQE" target="_blank">
-    <img src="https://img.youtube.com/vi/BL7dXvtKBQE/0.jpg" width="45%" alt="Performance Video">
+<a href="https://www.youtube.com/watch?v=BL7dXvtKBQE" target="_blank">
+  <img src="https://img.youtube.com/vi/BL7dXvtKBQE/0.jpg" width="45%" alt="Performance Video">
 </a>
 </p>
   
