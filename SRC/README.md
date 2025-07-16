@@ -238,4 +238,91 @@ void loop() {
 ```
 </details>
 
+# 🧱 OBSTACLE CHALLENGE
+
+For the obstacle challenge round, we used the same mobility system as in the first round. The only difference is that we activated the camera to detect and classify obstacles.
+
+As the first step, we import the necessary libraries.
+
+Due to the orientation of our robot, we inverted the captured image to correct its alignment.
+
+Additionally, we reduced the camera resolution (i.e., pixel count) to speed up image processing and enable faster response times.
+
+<details open>
+<summary>⚙️ CONFIGURATION </summary>
+
+
+```cpp
+from picamera2 import Picamera2
+import cv2
+from datetime import datetime
+import numpy as np
+import serial
+
+picam2 = Picamera2()
+picam2.start()
+ser = serial.Serial('/dev/ttyACM0', 115200, timeout=1)
+#mask_actual = masks["i"]
+
+----------------------------------------
+
+frame = picam2.capture_array()
+frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
+frame_real = cv2.flip(frame, 0)  #rotamos la camara verticalmente
+frame_reducido = cv2.resize(frame_real, (0, 0), fx=0.2, fy=0.2) #redimenzionando la imagen
+    
+
+``` 
+</details>
+
+
+
+We implemented a mask-based detection system using OpenCV, coded in Python and running on the Raspberry Pi Zero 2W.
+
+This method allows us to calculate the average RGB color within a specified region of the image.
+
+The result is then compared to a set of predefined thresholds to determine whether or not a block is present in that region.
+<details open>
+<summary>⚙️ MASK DECLARATION </summary>
+
+
+```cpp
+masks = {
+    "bd": ([80, 15], [120, 15], [120, 85], [80, 85]),
+    "bi": ([7, 15], [45, 15], [45, 85], [7, 85]),
+    "bcc": ([7, 15], [120, 15], [120, 85], [80, 85]),
+    "bcle": ([7, 15], [120, 15], [120, 85], [80, 85]),
+    "lcd": ([15, 0], [0, 15], [110, 95], [125, 80]),
+    "lci": ([110, 0], [125, 15], [15, 95], [0, 80]),
+    "i": ([0, 0], [125, 125], [95, 95], [80, 80]),
+}
+mask_actual = masks["i"]
+
+``` 
+</details>
+
+> **Note 🔔**  
+> The "i" mask is used as the default region and does not correspond to a specific detection zone.
+
+According to our strategy, the robot must know which region to analyze at each stage of the challenge.
+
+To accomplish this, the main Raspberry Pi Pico sends a request to the Raspberry Pi Zero 2W specifying the region to measure.
+
+The Zero 2W then processes that region and sends back the result via serial communication.
+
+<details open>
+<summary>⚙️ UART COMUNICATION </summary>
+  
+```cpp
+ if ser.in_waiting > 0:
+        mensaje = ser.readline().decode().strip()
+        print("Dato recibido:", mensaje)
+        if mensaje in masks:
+            mask_actual = masks[mensaje]
+----------------------------------------------------
+ # Enviar el color por serial
+    ser.write(f"{color}\n".encode())
+
+``` 
+</details>
 
