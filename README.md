@@ -178,6 +178,8 @@ This configuration ensures that all sensing elements operate consistently and ef
 ---
 # 🛣️ Open Challenge
 
+## First Round 
+
 For the first round, we focused on achieving precise turns and exceptional corrections.
 Since the initial position and orientation of the robot were unknown, we opted for a path that stayed as close as possible to the outer wall, minimizing the chance of hitting internal obstacles.
 
@@ -426,6 +428,12 @@ void loop() {
 
 ```
 </details>
+
+</details>
+
+---
+
+## Second Round
 
 
 
