@@ -8,13 +8,24 @@
 
 
 
-# OPEN CHALLENGE CODE
+# 🚀 OPEN CHALLENGE CODE
 
-Para el desarrollo de codigo fue ensencial el planeamiento de las rondas, anteriormente explicado en el apartado de Obstacle Managment, Debido a que necesitamos control absoluto de nuestro robot hemos creado nuestras propias librerias especificas para cada funcion del robot, como medir distancias, calculo de PID, vision de la camara, COntADORES, ETC.
+For the development of the control system, careful planning of the challenge stages—previously explained in the Obstacle Management section—was essential.
+Given the need for full control over the robot’s behavior, we designed and implemented custom libraries, each responsible for a specific subsystem such as:
 
-Esto nos permite tener mas orden y control dentro del codigo, ademas de ahorrarnos tiempo durante el desarrollo.
+- Distance measurement
 
-Como primer paso de nuestro codigo, llamamos a todas nuestras librerias.
+- PID control
+
+- Camera vision
+
+- Counters and timers
+
+- And other essential functionalities
+
+This modular structure allowed for a more organized and scalable codebase, reducing development time and improving maintainability.
+
+As the first step in our code, we import all the necessary libraries:
 
 
 <details open>
@@ -31,9 +42,9 @@ Como primer paso de nuestro codigo, llamamos a todas nuestras librerias.
 </details>
 
 > **Note 🔔**  
-> Laas variables se declaran dentro de cada libreria, lo que lo hace mas practico a la hora de escribir el codigo.
+> Variables and constants are declared within their respective librarie
 
-luego, se inicializa el serial y algunas funciones dentro de librerias como se muestra a continuacion:
+We then initialize the serial interface and call setup functions defined inside our custom libraries:
 
 <details open>
 <summary> ⚙️ SETUP
@@ -54,7 +65,9 @@ luego, se inicializa el serial y algunas funciones dentro de librerias como se m
 ```
 </details>
 
-como ultima parte viene el loop principal, donde se encuentra toda la logica del robot, donde se calculan angulos, posiciones, distancias, PID; el conjunto de todo estas medidas nos permiten dividir las zonas en 4 pasos, antes mencionados:
+Finally, the main loop is responsible for the robot's high-level behavior, including angle estimation, position updates, distance readings, and PID-based control.
+
+The logic is structured in four main steps, allowing the robot to progress through defined stages of the challenge.
 
 <details open>
 <summary> ⚙️ LOOP
