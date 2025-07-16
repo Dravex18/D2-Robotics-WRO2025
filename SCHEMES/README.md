@@ -6,21 +6,25 @@
 ### Here you’ll find everything related to the wiring, connections, and electronic layout of our robot. From power distribution to sensor interfaces, this section showcases the brain behind the machine.
 
 
-## DIgrama de circuito (esquematico)
+## ⚙️ Circuit Diagram (Schematic)
 
-En este apartado podra ver todas la  conexiones de nuestro robot en unu modelo esquematico disenado en kicad donde creamos toddo el digrama de la pcb.
-a continuacion se mostrara la imagen:
+### In this section, you can review every connection of our robot in a KiCad‑designed schematic model, where the complete PCB layout was created. The diagram is shown below:
 
 > ## **Note 🔔**  
-> Siguiendo el nombre de cada pin encontrara como se cierra el circuito
+> ### Refer to each pin label to trace the corresponding circuit path. You can also click the image to zoom in.
+> 
+
 
 
 ![WRO V1_page-0001](https://github.com/user-attachments/assets/8f233fc6-1441-45ed-8b5c-e2700c651931)
 
+--- 
 
-## PCB
+## 🖨️ PCB
 
-Este diagrama de circuito antes mostrado culmina en una hermosa pcb, que fue mandada a imprimri a china, dando como resultado un circuito sin cables.
+
+### The circuit schematic above culminates in an elegant PCB, fabricated in China, resulting in a fully routed board with no jumpers or wires.
+
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/8dd1a9b2-edd7-4850-887e-7b9c491e7c52" alt="PCB 1" width="30%" />
