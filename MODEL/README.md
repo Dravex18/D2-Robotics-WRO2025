@@ -26,7 +26,8 @@ The outcome is one of the most efficient and precise integrated drive‑and‑st
 </p>
 
 > ## **Note 🔔**  
-> ### You can download the .step file from the root directory of the `model` folder.
+> ### You can download the .step file [here!!!)](https://github.com/Dravex18/D2-Robotics-WRO2025/releases/download/v1.0-step/Final%20version%20v38.step) .
+
 
 
 
