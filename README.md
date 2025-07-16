@@ -176,19 +176,256 @@ This configuration ensures that all sensing elements operate consistently and ef
 
 
 ---
-# Obstacle Mangment
+# 🛣️ Open Challenge
 
-## Open Challlenge
-para la priemrra ronda decidimos enfoocarnos en giros precisos, y correciones excepcionales, al no saber en que osicion y direccion debe ir el robot decidimos hacer una ruta lo mas pegado posible  la a pared exterior evitando asi cualquier tipo de muro que nos pueda tocar.
-Bsasamos nuestra estrategia en superar curvas, creamos una serie de pasos que el robot de tomar en cuenta para saber el radio de giro y la distancia, en un principio ibamos a usar un sensor ultrasonico frontal apra detectar cuanto se acercba a una curva, ero nos dimos cuenta que podias calcular el deszplasamiento del robot de manera muy precisa, juntando estos factores puede comppletar una curva de manera perfecta.
-aqui les mostramos un esquema de la serie de pasos .
+For the first round, we focused on achieving precise turns and exceptional corrections.
+Since the initial position and orientation of the robot were unknown, we opted for a path that stayed as close as possible to the outer wall, minimizing the chance of hitting internal obstacles.
 
-esquem ---------------------
+Our strategy was centered on curve handling.
+We designed a sequence of steps to determine the appropriate turning radius and travel distance.
+Initially, we planned to use a front-facing ultrasonic sensor to detect the distance to an upcoming curve.
+However, we realized we could calculate the robot’s displacement with high precision using other methods.
+By combining these elements, the robot was able to navigate curves accurately and reliably.
 
-en el area denominada como "pasillo" usamos 2 puntos que nos 
+Here is a diagram illustrating the sequence of steps used:
+
+📊 [Insert curve-handling diagram here]
+
+In the section we called the "hallway", we used two key points as references to the outer wall.
+This allowed us to refine our localization and improve control accuracy.
+
+Once the robot completed 11 full sections, the program automatically recognized this and returned to the starting position, ending the round.
+
+<details>
+<summary>🛣️ Open Challenge Code</summary>
+
+For the development of the control system, careful planning of the challenge stages—previously explained in the Obstacle Management section—was essential.
+Given the need for full control over the robot’s behavior, we designed and implemented custom libraries, each responsible for a specific subsystem such as:
+
+- Distance measurement
+
+- PID control
+
+- Camera vision
+
+- Counters and timers
+
+- And other essential functionalities
+
+This modular structure allowed for a more organized and scalable codebase, reducing development time and improving maintainability.
+
+As the first step in our code, we import all the necessary libraries:
+
+
+<details>
+<summary>⚙️ Libraries</summary>
+
+```cpp
+#include <Arduino.h>
+#include <Bounce2.h>
+#include "Robot.h"
+#include "PID.h"
+#include <math.h>
+``` 
+</details>
+
+> **Note 🔔**  
+> Variables and constants are declared within their respective librarie
+
+We then initialize the serial interface and call setup functions defined inside our custom libraries:
+
+<details>
+<summary>⚙️ SETUP</summary>
+
+```cpp
+  
+ ```cpp
+  void setup() {
+  Serial.begin(115200);
+  myRobot.begin();
+
+  pinMode(builtinLed, OUTPUT);
+  pinMode(LED, OUTPUT);
+  digitalWrite(builtinLed, HIGH);
+
+  button.attach(buttonPin, INPUT_PULLUP);
+  button.interval(50);
+}
+
+```
+</details>
+
+Finally, the main loop is responsible for the robot's high-level behavior, including angle estimation, position updates, distance readings, and PID-based control.
+
+The logic is structured in four main steps, allowing the robot to progress through defined stages of the challenge.
+
+<details>
+<summary>⚙️ LOOP </summary>
 
 
 
+```cpp
+void loop() {
+  //Start
+  button.update();
+  if (button.fell() && !activo) {
+    activo = true;
+    digitalWrite(builtinLed, LOW);
+    myRobot.setSteerAngle(0);
+    delay(1000);
+  }
+  if (!activo || terminado) return;
+
+ //-----------------------------------------
+
+  if (step==0){
+    if (!stepActivaded[step]){
+        myRobot.setForceTriggerF(true);
+        myRobot.setForceTriggerO(true);
+        myRobot.setForceTriggerI(true);
+        myRobot.setDriveSpeed(0.4);
+        delay(200);
+        setpoint=0.5;
+        myRobot.setPoseX(0.5);  //Ronda 1, se puede cambiar por una lectura con el sensor ultrasonico
+        myRobot.setPoseY(1.4+0.4*0.2);  
+        stepActivaded[step]=true;
+    }
+    //out
+    if(myRobot.getPose('y')>=2){
+      step++;
+    }
+    
+  }
+
+  myRobot.listenEcho();
+  myRobot.updatePose();
+  if (pid.isEnabled()){ pwm = pid.compute(setpoint, myRobot.getPose('x')); }
+  myRobot.setServoPWM(pwm);
+  myRobot.simulateContinuousServo();
+
+  if (step==1){ 
+    if (!stepActivaded[step]){
+    //Aqui se puede agregar al despues
+    }
+      
+
+    if (myRobot.getDist('f')>0.2 && myRobot.getDist('f')<0.8 && dirr==0){  //esto se puede reemplazar por myrobotgetpose y
+      dirr = (myRobot.getDist('o') < 1) ? 1 : -1;
+
+    }
+
+
+    //out
+    if (dirr!=0 && myRobot.getDist('f')<0.65){ //el cornering toma 0.35m y se quiere que el setpoint este a 0.3,por lo que 0.35+0.3=0.65 //esto se puede reemplazar por myrobotgetpose y
+      
+      myRobot.setPoseX(myRobot.getDist('f'));
+
+      if (dirr==1){
+        myRobot.setPoseY(myRobot.getPose('x'));
+        myRobot.setPoseH(-90 + myRobot.getPose('h')) ; //aqui tengo que ver que pex
+      }
+      
+      else{
+        myRobot.setPoseY(1-myRobot.getPose('x'));
+        myRobot.setPoseH(-90 - myRobot.getPose('h'));  //aqui tengo que ver que pex
+      }
+      myRobot.setDIR(dirr);
+      pid.disable();
+      pid.setDIR(dirr);
+      step++;
+
+    } 
+  }
+  
+
+  if (step==2){
+    if (!stepActivaded[step]){
+    stepActivaded[step]=true;
+    }
+
+    //out
+    if(myRobot.getPose('h')>-5){
+      myRobot.setPoseX(myRobot.getDist('o'));
+      step++;
+    }
+    else {
+      myRobot.setSteerAngle(dirr == 1 ? -10 : -12);//esto no es lo ideal, esto se debe a un problema con la direccion
+    }
+  }
+
+  if (step==3){
+    if (!stepActivaded[step]){
+      digitalWrite(LED, LOW);
+      setpoint=0.3;
+      //myRobot.setDriveSpeed(0.0);
+      //myRobot.setSteerAngle(0);
+      //delay(500);
+      //myRobot.setDriveSpeed(0.4);
+      pid.reset();
+      pid.enable();
+      stepActivaded[step]=true;
+    }
+
+    // Captura primer punto
+    if (myRobot.getPose('y') > 1.1 && !x1_capturado) {
+      digitalWrite(LED, HIGH);
+      temp_x1 = myRobot.getDist('o');
+      temp_y1 = myRobot.getPose('y');
+      x1_capturado = true;
+    }
+
+    // Captura segundo punto
+    if (myRobot.getPose('y') > 1.2 && !x2_capturado) {
+      digitalWrite(LED, LOW);
+      temp_x2 = myRobot.getDist('o');
+      temp_y2 = myRobot.getPose('y');
+      x2_capturado = true;
+
+      float dx = temp_x2 - temp_x1;
+      float dy = temp_y2 - temp_y1;
+
+      float angulo_rad = atan2(dx, dy);
+      float angulo_deg = angulo_rad * 180.0 / PI;
+
+      myRobot.setPoseX(temp_x2);
+      myRobot.setPoseH(angulo_deg);
+
+    }
+    
+
+    //out
+    if (myRobot.getPose('y')>2 ){
+      //x1_capturado = false;
+      //x2_capturado = false;
+      stepActivaded[2]=false;
+      stepActivaded[3]=false;
+      step=1;
+    }
+
+  }
+
+  if (step==6){
+
+    
+    myRobot.setDriveSpeed(0.0);
+    myRobot.setServoPWM(0);
+/*
+    int divisor = round(myRobot.getPose('y') / 0.1);
+    for (int i = 0; i < divisor; i++) {
+    digitalWrite(LED, HIGH);
+    delay(500);
+    digitalWrite(LED, LOW);
+    delay(500);
+  }
+  */
+    terminado = true;
+  }
+
+}
+
+
+```
+</details>
 
 
 
