@@ -72,17 +72,60 @@ Below is a complete breakdown of the electrical components that bring our robot 
 From custom-designed PCBs to 3D-printed parts and high-performance sensors, this list captures the core of what makes our robot smart, fast, and competition-ready.
 
 
-| component | Image | buy link |
-|--------------|--------------|--------------|
-| Raspberry Pi Pico   |  <img src="./OTHERS/Imagenes/pico.png" width="120"/>       | [🛒 Buy here!](https://www.amazon.com/dp/B0BDLHMQ9C)\ |
-| Raspberry Pi Zero 2w|  <img src="./OTHERS/Imagenes/pi zero2w.png" width="120"/>  | [🛒 Buy here!](https://www.amazon.com/dp/B0DRRRZBMP) |
-| Raspberry Pi Camer 3|  <img src="./OTHERS/Imagenes/pi camer 3.jpg" width="120"/> | [🛒 Buy here!](https://www.amazon.com/dp/B0C9PYCV9S) |
-| N20 Motor           |  <img src="./OTHERS/Imagenes/motores.png" width="120"/>    | [🛒 Buy here!](https://www.amazon.com/dp/B07FVRTWKV) |
-| SG90 Servomotor     |  <img src="./OTHERS/Imagenes/servo.png" width="120"/>      | [🛒 Buy here!](https://www.amazon.com/dp/B0DRHXGY4X) |
-| HC-SR04 Sensor      |  <img src="./OTHERS/Imagenes/ultrasonic.png" width="120"/> | [🛒 Buy here!](https://www.amazon.com/dp/B0B1MJJLJP) |
-| TB6612 Motor Contol |  <img src="./OTHERS/Imagenes/tb6612.jpg" width="120"/>     | [🛒 Buy here!](https://lcsc.com/product-detail/Brushed-DC-Motor-Drivers_TOSHIBA-TB6612FNG-O-C-8-EL_C88224.html) |
-| MPU605 Gyroscope    |  <img src="./OTHERS/Imagenes/mpu6050.png" width="120"/>    | [🛒 Buy here!](https://lcsc.com/product-detail/Attitude-Sensors_TDK-InvenSense-MPU-6050_C24112.html) |
-| 3.7v Steren Battery |  <img src="./OTHERS/Imagenes/baterias.png" width="120"/>   | [🛒 Buy here!](https://www.steren.com.pa/bateria-recargable-li-ion-2200-mah-tipo-18650.html) |
+<table align="center">
+  <!-- Row group 1: Raspberry Pi components -->
+  <tr>
+    <td align="center"><strong>Raspberry Pi Pico</strong></td>
+    <td align="center"><strong>Raspberry Pi Zero 2W</strong></td>
+    <td align="center"><strong>Raspberry Pi Camera 3</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./OTHERS/Imagenes/pico.png" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/pi zero2w.png" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/pi camer 3.jpg" width="120"/></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.amazon.com/dp/B0BDLHMQ9C">🛒 Buy here!</a></td>
+    <td align="center"><a href="https://www.amazon.com/dp/B0DRRRZBMP">🛒 Buy here!</a></td>
+    <td align="center"><a href="https://www.amazon.com/dp/B0C9PYCV9S">🛒 Buy here!</a></td>
+  </tr>
+
+  <!-- Row group 2: Motors & sensor -->
+  <tr>
+    <td align="center"><strong>N20 Motor</strong></td>
+    <td align="center"><strong>SG90 Servomotor</strong></td>
+    <td align="center"><strong>HC‑SR04 Sensor</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./OTHERS/Imagenes/motores.png" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/servo.png" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/ultrasonic.png" width="120"/></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://www.amazon.com/dp/B07FVRTWKV">🛒 Buy here!</a></td>
+    <td align="center"><a href="https://www.amazon.com/dp/B0DRHXGY4X">🛒 Buy here!</a></td>
+    <td align="center"><a href="https://www.amazon.com/dp/B0B1MJJLJP">🛒 Buy here!</a></td>
+  </tr>
+
+  <!-- Row group 3: Drivers & battery -->
+  <tr>
+    <td align="center"><strong>TB6612 Motor Driver</strong></td>
+    <td align="center"><strong>MPU6050 Gyroscope</strong></td>
+    <td align="center"><strong>3.7 V Steren Battery</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="./OTHERS/Imagenes/tb6612.jpg" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/mpu6050.png" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/baterias.png" width="120"/></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://lcsc.com/product-detail/Brushed-DC-Motor-Drivers_TOSHIBA-TB6612FNG-O-C-8-EL_C88224.html">🛒 Buy here!</a></td>
+    <td align="center"><a href="https://lcsc.com/product-detail/Attitude-Sensors_TDK-InvenSense-MPU-6050_C24112.html">🛒 Buy here!</a></td>
+    <td align="center"><a href="https://www.steren.com.pa/bateria-recargable-li-ion-2200-mah-tipo-18650.html">🛒 Buy here!</a></td>
+  </tr>
+</table>
+
+
 
 > **Note 🔔**  
 > For an in-depth look at the circuit diagram, check out the SCHEMES folder by clicking [here](./SCHEMES).
