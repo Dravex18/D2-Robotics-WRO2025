@@ -6,6 +6,10 @@
 ### Here you’ll find a visual glimpse into how our team works — a compilation of moments captured throughout the development process, showcasing collaboration, creativity, and behind-the-scenes action.
 
 
+<p align="center">
+
 | TEAM PHOTO    | CRAZY PHOTO |
-| ------------ | ------------ | 
-| Row 1, Col A | Row 1, Col B |
+| ------------- | ----------- |
+| Row 1, Col A  | Row 1, Col B |
+
+</p>
