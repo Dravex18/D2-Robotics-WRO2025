@@ -610,7 +610,7 @@ It showcases the execution of key functionalities such as:
 
 - Color detection 
 
-📽️ Watch the videos [![YouTube](https://img.shields.io/badge/-YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/@Dravex_18) :
+📽️ Watch the videos by clicking ten images or you can visit our youtube channel  [![YouTube](https://img.shields.io/badge/-YouTube-red?logo=youtube&logoColor=white)](https://www.youtube.com/@Dravex_18) >
 
 <table align="center">
   <tr>
