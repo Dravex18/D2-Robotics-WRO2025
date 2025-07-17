@@ -250,7 +250,9 @@ This allowed us to refine our localization and improve control accuracy.
 Once the robot completed 11 full sections, the program automatically recognized this and returned to the starting position, ending the round.
 
 <details>
-<summary>🛣️ Open Challenge Code</summary>
+<summary>🛣️ Open Challenge Code (CLICK HER TO OPEN IT!)</summary>
+
+# 🚀 OPEN CHALLENGE CODE
 
 For the development of the control system, careful planning of the challenge stages—previously explained in the Obstacle Management section—was essential.
 Given the need for full control over the robot’s behavior, we designed and implemented custom libraries, each responsible for a specific subsystem such as:
@@ -270,7 +272,7 @@ This modular structure allowed for a more organized and scalable codebase, reduc
 As the first step in our code, we import all the necessary libraries:
 
 
-<details>
+<details open>
 <summary>⚙️ Libraries</summary>
 
 ```cpp
@@ -287,7 +289,7 @@ As the first step in our code, we import all the necessary libraries:
 
 We then initialize the serial interface and call setup functions defined inside our custom libraries:
 
-<details>
+<details open>
 <summary>⚙️ SETUP</summary>
 
 ```cpp
@@ -312,7 +314,7 @@ Finally, the main loop is responsible for the robot's high-level behavior, inclu
 
 The logic is structured in four main steps, allowing the robot to progress through defined stages of the challenge.
 
-<details>
+<details open>
 <summary>⚙️ LOOP </summary>
 
 
@@ -505,7 +507,9 @@ After the final lap, the robot begins detecting the magenta color of the parking
 
 
 <details>
-<summary>🛣️ Obstacle Challenge Code</summary>
+<summary>  🛣️ Obstacle Challenge Code (CLICK HER TO OPEN IT!)</summary>
+
+# 🧱 OBSTACLE CHALLENGE
 
 For the obstacle challenge round, we used the same mobility system as in the first round. The only difference is that we activated the camera to detect and classify obstacles.
 
@@ -515,8 +519,8 @@ Due to the orientation of our robot, we inverted the captured image to correct i
 
 Additionally, we reduced the camera resolution (i.e., pixel count) to speed up image processing and enable faster response times.
 
-<details>
-<summary>⚙️ CONFIGURATION </summary>
+<details open>
+<summary> ⚙️ CONFIGURATION </summary>
 
 
 ```cpp
@@ -549,7 +553,7 @@ We implemented a mask-based detection system using OpenCV, coded in Python and r
 This method allows us to calculate the average RGB color within a specified region of the image.
 
 The result is then compared to a set of predefined thresholds to determine whether or not a block is present in that region.
-<details>
+<details open>
 <summary>⚙️ MASK DECLARATION </summary>
 
 
@@ -577,7 +581,7 @@ To accomplish this, the main Raspberry Pi Pico sends a request to the Raspberry 
 
 The Zero 2W then processes that region and sends back the result via serial communication.
 
-<details>
+<details open>
 <summary>⚙️ UART COMUNICATION </summary>
   
 ```cpp
