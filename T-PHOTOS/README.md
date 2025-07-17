@@ -10,6 +10,7 @@
 
 | TEAM PHOTO    | CRAZY PHOTO |
 | ------------- | ----------- |
-| Row 1, Col A  | Row 1, Col B |
+| ![Foto seria](https://github.com/user-attachments/assets/311d4cf9-05ba-4f1e-895c-c0a84683b6df)  | ![foto loca](https://github.com/user-attachments/assets/507d4c39-5291-4588-8bfb-1001c851f2bd) |
 
 </div>
+
