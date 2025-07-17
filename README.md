@@ -242,7 +242,6 @@ By combining these elements, the robot was able to navigate curves accurately an
 
 Here is a diagram illustrating the sequence of steps used:
 
-📊 [Insert curve-handling diagram here]
 
 In the section we called the "hallway", we used two key points as references to the outer wall.
 This allowed us to refine our localization and improve control accuracy.
@@ -495,7 +494,6 @@ Because the robot now starts from a designated parking zone, we leveraged the in
 
 After this, the track was divided into distinct lanes for better control and logic structuring.
 
-📊 [Insert "Exit from Parking" Diagram Here]
 
 Another key change involves curve handling. The set of target points used by the robot to follow a curve now varies depending on the lane it is in.
 
