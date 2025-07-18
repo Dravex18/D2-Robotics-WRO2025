@@ -26,7 +26,7 @@ The outcome is one of the most efficient and precise integrated drive‑and‑st
 </p>
 
 > ## **Note 🔔**  
-> ### You can download the .step file [Descargar el modelo STEP (Final version v113.step)](./MODEL/Version%20113.step)
+> ### You can download the .step file [Dowload Step Model (Final version v113.step)](https://github.com/Dravex18/D2-Robotics-WRO2025/raw/main/MODEL/Version%20113.step)
 
 
 
