@@ -6,9 +6,12 @@
 ### Here you’ll find detailed images of our robot, along with an interactive experimental view where you can explore the robot in full 360°!  
 ### This section gives you a closer look at the design, components, and final assembly of our machine.
 
+[![Abrir galería (PDF)](left.jpg)](ttps://github.com/user-attachments/files/21764872/Diseno.sin.titulo.pdf) 
+
+
 | ◀️ Left View | ▶️ Right View |
 |--------------|---------------|
-| ![Left](left.jpg) | ![Right](right.jpg) |
+| ![Left](left.jpg) | ![Right](right.jpg) | 
 
 | 🔼 Top View | 🔽 Bottom View |
 |------------|----------------|
