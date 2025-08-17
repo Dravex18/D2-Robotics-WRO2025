@@ -227,7 +227,10 @@ This configuration ensures that all sensing elements operate consistently and ef
 
 
 ---
-# 🛣️ Open Challenge
+# 🛣️ Ronds Strategy
+
+## General information for all rounds
+
 
 ## First Round 
 
