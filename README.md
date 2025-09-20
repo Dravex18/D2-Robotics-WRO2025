@@ -63,11 +63,8 @@ This repository contains all the code, documentation, and development resources 
 - [📊 ](./SCHEMES)`SCHEMES` – Check out the **circuit diagrams** and wiring plans.
 - [📸 ](./V-PHOTOS)`V-PHOTOS` – Browse through **photos of the robot**. 
 - [😵 ](./T-PHOTOS)`T-PHOTOS` – All photos of the team (A rare look at **Davis under pressure** 😅???)  
-- [🎥](./VIDEO) `VIDEO` – Watch the **robot in action** in our demo video.
+- [🎥](./VIDEO) `VIDEO` – Watch the **robot in action** in our demo videos.
 - [📂](./OTHERS) `OTHERS` – Extra files and assets used in the development process.
-
-> # **Note 🔔**  
-> ## Please review each folder, as it contains important information that complements the project.
 
 
 # 🔧 Robot Components
@@ -81,7 +78,7 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
   <tr>
     <td align="center"><strong>Raspberry Pi Pico</strong></td>
     <td align="center"><strong>Raspberry Pi Zero 2W</strong></td>
-    <td align="center"><strong>Raspberry Pi Camera 3</strong></td>
+    <td align="center"><strong>Raspberry Pi Camera 3 Wide</strong></td>
   </tr>
   <tr>
     <td align="center"><img src="./OTHERS/Imagenes/pico.png" width="120"/></td>
@@ -229,8 +226,20 @@ This configuration ensures that all sensing elements operate consistently and ef
 ---
 # 🛣️ Ronds Strategy
 
+quitar para comentar
+<!--
 ## General information for all rounds
 
+Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot, estos conceptos son utilizados principalmente para el movimiento y posicionamiento de nuestro robot en la pista de competencias:
+
+- Posicionamiento en 'X' y 'Y':
+- Algoritmo Persuit:
+- Paths:
+
+
+
+
+-->
 
 ## First Round 
 
