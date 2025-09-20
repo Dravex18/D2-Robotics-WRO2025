@@ -268,8 +268,7 @@ Once the robot completed 11 full sections, the program automatically recognized 
 
 ## 🏁 Second Round (Obstacle Challenge)
 
-cooment 
-<!--
+cooment <!--
 For the obstacle round, precision is prioritized over speed. The first challenge to address was selecting a sensor capable of detecting track colors and a development board powerful enough to process images without adding excessive weight or size. After extensive research, we chose the Pi Camera 3 Wide for image capture. This camera provides a 120° field of view (FOV), allowing for a wider visual range. For processing, we used the Raspberry Pi Zero 2W, a compact computer capable of handling image data quickly and reliably.
 
 ### Strategy
