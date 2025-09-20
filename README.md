@@ -189,7 +189,7 @@ Below, we present an image of the implemented system:
 </div>
 
 > **Note 🔔**  
-> You can view the robot in a **3D environment** [here](./MODEL), or see robot images [here](./V-PHOTOS).
+> You can dowload the robot 3D design by clicking [here](./MODEL), or see robot images [here](./V-PHOTOS).
 
 ---
 
@@ -224,7 +224,7 @@ This configuration ensures that all sensing elements operate consistently and ef
 
 
 ---
-# 🛣️ Ronds Strategy
+# 🛣️ Rounds Strategy
 
 quitar para comentar
 <!--
@@ -268,7 +268,8 @@ Once the robot completed 11 full sections, the program automatically recognized 
 
 ## 🏁 Second Round (Obstacle Challenge)
 
-cooment <!--
+cooment 
+<!--
 For the obstacle round, precision is prioritized over speed. The first challenge to address was selecting a sensor capable of detecting track colors and a development board powerful enough to process images without adding excessive weight or size. After extensive research, we chose the Pi Camera 3 Wide for image capture. This camera provides a 120° field of view (FOV), allowing for a wider visual range. For processing, we used the Raspberry Pi Zero 2W, a compact computer capable of handling image data quickly and reliably.
 
 ### Strategy
@@ -290,11 +291,14 @@ The following diagram illustrates how the threads operate within our code:
 
 For color processing, we explored multiple approaches, but the most effective one was color segmentation. First, we capture the image in RGB format to maintain control over parameters such as exposure time. Then, we convert it to HSV format, which is better suited for handling variations in ambient lighting.
 
+
 In simple terms, color segmentation works by defining specific HSV ranges for each target color. These ranges can be adjusted depending on lighting conditions or saturation levels. Each pixel is checked against the predefined range: if it falls within the range, it is set to 1; otherwise, it is set to 0.
 
+
 Finally, we count the number of pixels that match the red and green ranges, respectively. These counts are then compared against a minimum threshold established by us. If both exceed the threshold, the color with the greater pixel count is selected.
+
+
 -->
 
-<details>
-<summary>  🛣️ Obstacle Challenge Code (CLICK HER TO OPEN IT!)</summary>
+[🛣️ Obstacle Challenge Code (CLICK HER TO OPEN IT!)](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L11)
 
