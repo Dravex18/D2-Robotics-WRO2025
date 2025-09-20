@@ -268,7 +268,8 @@ Once the robot completed 11 full sections, the program automatically recognized 
 
 ## 🏁 Second Round (Obstacle Challenge)
 
-cooment <!--
+cooment 
+<!--
 For the obstacle round, precision is prioritized over speed. The first challenge to address was selecting a sensor capable of detecting track colors and a development board powerful enough to process images without adding excessive weight or size. After extensive research, we chose the Pi Camera 3 Wide for image capture. This camera provides a 120° field of view (FOV), allowing for a wider visual range. For processing, we used the Raspberry Pi Zero 2W, a compact computer capable of handling image data quickly and reliably.
 
 ### Strategy
@@ -277,6 +278,9 @@ To process the images, we decided to use OpenCV, as it provides both flexibility
 
 The following image illustrates the regions we used:
 
+<p align="center">
+<img width="487" height="249" alt="image" src="https://github.com/user-attachments/assets/08ce2727-bfe3-4ebc-87e0-d7fe9d3c5b71" />
+</p>
 
 As can be observed, when exiting the parking slot there is a special case for each direction. If the direction is clockwise, the robot must process both Region A and Region B. To handle this simultaneously, we implemented multithreading. In total, three threads are used: two dedicated to image capture and one main thread. These threads run concurrently without interfering with one another, making this approach ideal for our situation.
 
