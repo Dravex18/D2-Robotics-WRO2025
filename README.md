@@ -241,7 +241,7 @@ Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot
 
 -->
 
-## First Round 
+## First Round (Open Challenge)
 
 For the first round, we focused on achieving precise turns and exceptional corrections.
 Since the initial position and orientation of the robot were unknown, we opted for a path that stayed as close as possible to the outer wall, minimizing the chance of hitting internal obstacles.
@@ -266,24 +266,30 @@ Once the robot completed 11 full sections, the program automatically recognized 
 
 
 
-## 🏁 Second Round
+## 🏁 Second Round (Obstacle Challenge)
+
+cooment 
+<!--
+For the obstacle round, precision is prioritized over speed. The first challenge to address was selecting a sensor capable of detecting track colors and a development board powerful enough to process images without adding excessive weight or size. After extensive research, we chose the Pi Camera 3 Wide for image capture. This camera provides a 120° field of view (FOV), allowing for a wider visual range. For processing, we used the Raspberry Pi Zero 2W, a compact computer capable of handling image data quickly and reliably.
+
+### Strategy
+
+To process the images, we decided to use OpenCV, as it provides both flexibility and speed. We divided the field of view into ROIs (Regions of Interest), which adapt depending on the robot’s position and the location of the next block to be detected. This approach allows us to process only the pixels within the relevant region, optimizing efficiency and reducing computational load.
+
+The following image illustrates the regions we used:
 
 
-For the second round, we used the same steering system as in the first round, with a few critical modifications.
+As can be observed, when exiting the parking slot there is a special case for each direction. If the direction is clockwise, the robot must process both Region A and Region B. To handle this simultaneously, we implemented multithreading. In total, three threads are used: two dedicated to image capture and one main thread. These threads run concurrently without interfering with one another, making this approach ideal for our situation.
 
-Because the robot now starts from a designated parking zone, we leveraged the initial ultrasonic distance readings to determine the robot’s orientation and movement direction from the very beginning.
-
-After this, the track was divided into distinct lanes for better control and logic structuring.
+The following diagram illustrates how the threads operate within our code:
 
 
-Another key change involves curve handling. The set of target points used by the robot to follow a curve now varies depending on the lane it is in.
+For color processing, we explored multiple approaches, but the most effective one was color segmentation. First, we capture the image in RGB format to maintain control over parameters such as exposure time. Then, we convert it to HSV format, which is better suited for handling variations in ambient lighting.
 
-This allowed us to create a lane-specific curve model, enabling the robot to detect all blocks across the track with minimal blind spots.
+In simple terms, color segmentation works by defining specific HSV ranges for each target color. These ranges can be adjusted depending on lighting conditions or saturation levels. Each pixel is checked against the predefined range: if it falls within the range, it is set to 1; otherwise, it is set to 0.
 
-This entire process repeats until the robot completes three full laps.
-
-After the final lap, the robot begins detecting the magenta color of the parking zone and finishes the round by aligning itself in parallel with the parking area.
-
+Finally, we count the number of pixels that match the red and green ranges, respectively. These counts are then compared against a minimum threshold established by us. If both exceed the threshold, the color with the greater pixel count is selected.
+-->
 
 <details>
 <summary>  🛣️ Obstacle Challenge Code (CLICK HER TO OPEN IT!)</summary>
