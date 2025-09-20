@@ -31,7 +31,7 @@ This repository contains all the code, documentation, and development resources 
         <strong>- David</strong> is a thoughtful and strategic member of the team who constantly strives to bring people together and keep the project on track. Passionate about baseball and always aiming to win, he brings a sharp mindset to both teamwork and technical challenges—though anime isn't really his thing.
       </p>
       <p>
-       <strong>-</strong> In the team, David leads the mechanical and electronic design, creating the robot chassis, 3D-printed parts, and custom PCBs. More than just building, he's responsible for planning the overall robot strategy, ensuring all components work together towards a clear goal. He also contributes significantly to project documentation, helping the team stay organized and aligned throughout the competition.
+       <strong>-</strong> In the team, David leads the selection and integration of sensors, ensuring that the robot can perceive and respond to its environment with high accuracy. He was also responsible for the computer vision system, playing a fundamental role in the success of the project. Beyond his software contributions, he supports the team in PCB design and in the development of both electrical and mechanical components, making him a versatile and indispensable member of the team.
       </p>
     </td>
   </tr>
@@ -48,7 +48,7 @@ This repository contains all the code, documentation, and development resources 
         <strong>- Davis</strong> is a key problem-solver on the team, known for his strong logical thinking and focus on efficient solutions. He plays a central role in the programming of the robot and is responsible for defining the logical strategy that guides its behavior during the competition.
       </p>
       <p>
-       <strong>- Davis</strong> also leads the selection and integration of sensors, ensuring the robot can perceive and react to its environment accurately. In addition to his software contributions, he supports the team in the design of PCBs, as well as in the development of both electrical and mechanical components, making him a versatile and essential part of the team.
+       <strong>-</strong> In the team, Davis leads the mechanical and electronic design, developing the robot chassis, 3D-printed components, and custom PCBs. Beyond fabrication, he is responsible for planning the overall robot strategy, ensuring that all subsystems operate cohesively toward a defined objective. In addition to his strategic contributions, Davis provided technical expertise and optimization across multiple aspects of the project, strengthening both performance and reliability.
       </p>
     </td>
   </tr>
