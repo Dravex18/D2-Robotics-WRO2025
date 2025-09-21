@@ -233,7 +233,7 @@ Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot
 
 - Available distance sensing: Currently, we only use two lateral ultrasonic sensors, whose purpose is to compensate for MPU6050 drift. The GPIOs originally reserved for a front ultrasonic sensor were reassigned to front IR sensors (placed at the edges of the front face) to improve accuracy during entry/positioning in the parking area.
 
-- PID control strategy: Our robot relies on three operating modes:
+- PID control strategy: Our robot relies on three operating modes.
 
   - Lateral PID (conventional): Maintains a transversal setpoint (x or y) relative to the circuit’s straight walls. In this context, the offset refers to the distance between the robot and the outer wall, which is kept stable to ensure straight-line motion.
 
@@ -249,9 +249,14 @@ Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot
 > A single “generic” PID tends to mix objectives (lateral vs. directional), degrading stability and response time, while forcing contradictory tuning. Keeping them separated ensures stability, clear gain assignment, and better performance.
 
 
-- Paths:
+- State estimation: distance and pose: We rely on two sources.
+    - Relative distance/pose (simplified odometry): The PCB integrates an MPU IMU sampling every 10 ms, from which the robot’s orientation angle is obtained through angular velocity integration. Linear velocity is estimated using a simple “power → velocity” lookup table, since no encoders are used. Although the relationship with voltage is non-linear, the system is constrained to 1–2 predefined speed levels to minimize error.
+    - Absolute distance/pose (rectification): In predefined sections, where the robot is nearly parallel to the walls, lateral ultrasonic sensors are used to measure and correct accumulated drift (x or y depending on the active axis). In the code, this appears as absolute readings such as robot.getPoseXFromSensors(setpoint), injected after specific events like the end of a turn or the midpoint of a straight.
 
-
+- Map and setpoint conventions: To simplify both code implementation and internal communication, we defined a set of conventions: the default driving direction is counterclockwise ('A') as a design guideline; the Y-axis runs parallel to the straight walls; and the heading is set to 0° when the robot is aligned parallel to the walls, increasing when turning toward the inner walls and decreasing when turning toward the outer walls.
+    - Track zoning: The track is divided into four zones (zone0 … zone3), each with its own predefined paths and associated rules for rectification and camera-based readings.
+    - Parallel setpoints (straights): The track is divided into 4 zones, with the coordinate system defined so that the Y-axis runs parallel to the walls. We use typical offsets of 0.2, 0.4, 0.5, and 0.8 meters, plus an auxiliary offset of 0.29 meters for parking and fine-tuning. Four parallel setpoints are defined and represented along the track.
+      
 
 
 -->
