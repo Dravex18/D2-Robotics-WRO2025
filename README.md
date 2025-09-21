@@ -335,7 +335,7 @@ Finally, we count the number of pixels that match the red and green ranges, resp
 
 -->
 > **Note 🔔**  
-> You can view the complete source code of our project inside the [`SRC` ](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L45) folder.
+> You can view the complete source code of our project inside the [`SRC` ](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L145) folder.
 
 
 
