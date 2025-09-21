@@ -189,7 +189,7 @@ Below, we present an image of the implemented system:
 </div>
 
 > **Note 🔔**  
-> You can dowload the robot 3D design by clicking [here](./MODEL), or see robot images [here](./V-PHOTOS).
+> We encourage you to visit the `MODEL` older, where you can download the robot’s 3D design by clicking here [here](./MODEL),, and check the `V-PHOTOS` folder to view images of the robot [here](./V-PHOTOS).
 
 ---
 
@@ -229,7 +229,7 @@ This configuration ensures that all sensing elements operate consistently and ef
 quitar para comentar<!--
 ## General information for all rounds
 
-Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot, estos conceptos son utilizados principalmente para el movimiento y posicionamiento de nuestro robot en la pista de competencias:
+There are several concepts required to understand the operation of our robot; these concepts are mainly applied to the movement and positioning of our robot on the competition track.
 
 - Available distance sensing: Currently, we only use two lateral ultrasonic sensors, whose purpose is to compensate for MPU6050 drift. The GPIOs originally reserved for a front ultrasonic sensor were reassigned to front IR sensors (placed at the edges of the front face) to improve accuracy during entry/positioning in the parking area.
 
@@ -335,7 +335,7 @@ Finally, we count the number of pixels that match the red and green ranges, resp
 
 -->
 > **Note 🔔**  
-> Puedes ver el codigo completo de nuestro proyecto dentr de la carpeta [`SRC` ](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L45)
+> You can view the complete source code of our project inside the [`SRC` ](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L45) folder.
 
 
 
