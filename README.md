@@ -265,7 +265,8 @@ Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot
 </p>
 
 > **Note 🔔**  
-> You can dowload yhe pyton fle to create paths by clicking [HERE](https://raw.githubusercontent.com/USER/REPO/main/SRC/paths.py)
+> You can dowload yhe pyton fle to create paths by clicking [HERE](./SRC/paths.py)
+
 
 
 
