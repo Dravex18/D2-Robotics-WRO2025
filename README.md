@@ -226,8 +226,7 @@ This configuration ensures that all sensing elements operate consistently and ef
 ---
 # 🛣️ Rounds Strategy
 
-p
-<!--
+p<!--
 ## General information for all rounds
 
 There are several concepts required to understand the operation of our robot; these concepts are mainly applied to the movement and positioning of our robot on the competition track.
