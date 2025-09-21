@@ -189,7 +189,7 @@ Below, we present an image of the implemented system:
 </div>
 
 > **Note 🔔**  
-> We encourage you to visit the `MODEL` older, where you can download the robot’s 3D design by clicking here [here](./MODEL),, and check the `V-PHOTOS` folder to view images of the robot [here](./V-PHOTOS).
+> We encourage you to visit the `MODEL` folder, where you can download the robot’s 3D design by clicking here [here](./MODEL),, and check the `V-PHOTOS` folder to view images of the robot [here](./V-PHOTOS).
 
 ---
 
