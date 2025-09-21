@@ -226,7 +226,8 @@ This configuration ensures that all sensing elements operate consistently and ef
 ---
 # 🛣️ Rounds Strategy
 
-p<!--
+p
+<!--
 ## General information for all rounds
 
 There are several concepts required to understand the operation of our robot; these concepts are mainly applied to the movement and positioning of our robot on the competition track.
@@ -272,7 +273,6 @@ There are several concepts required to understand the operation of our robot; th
 
 
       
--->
 
 ## First Round (Open Challenge)
 
@@ -301,7 +301,7 @@ Once the robot completed 11 full sections, the program automatically recognized 
 ## 🏁 Second Round (Obstacle Challenge)
 
  
-p<!--
+
 For the obstacle round, precision is prioritized over speed. The first challenge to address was selecting a sensor capable of detecting track colors and a development board powerful enough to process images without adding excessive weight or size. After extensive research, we chose the Pi Camera 3 Wide for image capture. This camera provides a 120° field of view (FOV), allowing for a wider visual range. For processing, we used the Raspberry Pi Zero 2W, a compact computer capable of handling image data quickly and reliably.
 
 ### Strategy
@@ -333,10 +333,10 @@ In simple terms, color segmentation works by defining specific HSV ranges for ea
 Finally, we count the number of pixels that match the red and green ranges, respectively. These counts are then compared against a minimum threshold established by us. If both exceed the threshold, the color with the greater pixel count is selected.
 
 
--->
+
 > **Note 🔔**  
 > You can view the complete source code of our project inside the [`SRC` ](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L145) folder.
-
+-->
 
 
 
