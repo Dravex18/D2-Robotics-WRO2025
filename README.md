@@ -251,14 +251,24 @@ Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot
 
 - State estimation: distance and pose: We rely on two sources.
     - Relative distance/pose (simplified odometry): The PCB integrates an MPU IMU sampling every 10 ms, from which the robot’s orientation angle is obtained through angular velocity integration. Linear velocity is estimated using a simple “power → velocity” lookup table, since no encoders are used. Although the relationship with voltage is non-linear, the system is constrained to 1–2 predefined speed levels to minimize error.
-    - Absolute distance/pose (rectification): In predefined sections, where the robot is nearly parallel to the walls, lateral ultrasonic sensors are used to measure and correct accumulated drift (x or y depending on the active axis). In the code, this appears as absolute readings such as robot.getPoseXFromSensors(setpoint), injected after specific events like the end of a turn or the midpoint of a straight.
+    - Absolute distance/pose (rectification): In predefined sections, where the robot is nearly parallel to the walls, lateral ultrasonic sensors are used to measure and correct accumulated drift (x or y depending on the active axis). In the code, this appears as absolute readings such as `robot.getPoseXFromSensors(setpoint)`, injected after specific events like the end of a turn or the midpoint of a straight.
 
 - Map and setpoint conventions: To simplify both code implementation and internal communication, we defined a set of conventions: the default driving direction is counterclockwise ('A') as a design guideline; the Y-axis runs parallel to the straight walls; and the heading is set to 0° when the robot is aligned parallel to the walls, increasing when turning toward the inner walls and decreasing when turning toward the outer walls.
     - Track zoning: The track is divided into four zones (zone0 … zone3), each with its own predefined paths and associated rules for rectification and camera-based readings.
-    - Parallel setpoints (straights): The track is divided into 4 zones, with the coordinate system defined so that the Y-axis runs parallel to the walls. We use typical offsets of 0.2, 0.4, 0.5, and 0.8 meters, plus an auxiliary offset of 0.29 meters for parking and fine-tuning. Four parallel setpoints are defined and represented along the track.
+    - Parallel setpoints (straights): The track is divided into four zones, with the coordinate system defined so that the Y-axis runs parallel to the walls. Two coordinate system schemes are considered: counterclockwise and clockwise. We use typical offsets of 0.2, 0.4, 0.5, and 0.8 meters, plus an auxiliary offset of 0.29 meters for parking and fine-tuning. Four parallel setpoints are defined and represented along the track.
+
+- Paths and the application of Pursuit: The Pursuit PID is used for approximately 15 predefined paths, including 90° turns, alignments, and lane adjustments at the end of straight sections. Both the `lookahead_dist` and the Pursuit gains are adapted depending on the path, for example, path 6 is specifically tuned for 90° turns.
+  
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f25f3d3a-7837-4fdc-bc11-2cadcefc7e7a" width="45%">
+  <img src="https://github.com/user-attachments/assets/c113117e-2c7e-4a74-8df6-2a2738452664" width="45%">
+</p>
+
+> **Note 🔔**  
+> You can dowload yhe pyton fle to create paths by clicking 
+
+
       
-
-
 -->
 
 ## First Round (Open Challenge)
