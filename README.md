@@ -293,7 +293,6 @@ This allowed us to refine our localization and improve control accuracy.
 
 Once the robot completed 11 full sections, the program automatically recognized this and returned to the starting position, ending the round.
 
-[🛣️ Open Challenge Code (CLICK HER TO OPEN IT!)](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L11)
 
 
 
@@ -335,6 +334,9 @@ Finally, we count the number of pixels that match the red and green ranges, resp
 
 
 -->
+> **Note 🔔**  
+> Puedes ver el codigo completo de nuestro proyecto dentr de la carpeta [`SRC` ](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L45)
 
-[🛣️ Obstacle Challenge Code (CLICK HER TO OPEN IT!)](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L11)
+
+
 
