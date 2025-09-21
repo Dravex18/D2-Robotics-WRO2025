@@ -226,14 +226,21 @@ This configuration ensures that all sensing elements operate consistently and ef
 ---
 # 🛣️ Rounds Strategy
 
-quitar para comentar
-<!--
+quitar para comentar<!--
 ## General information for all rounds
 
 Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot, estos conceptos son utilizados principalmente para el movimiento y posicionamiento de nuestro robot en la pista de competencias:
 
-- Posicionamiento en 'X' y 'Y':
-- Algoritmo Persuit:
+- Available distance sensing: Currently, we only use two lateral ultrasonic sensors, whose purpose is to compensate for MPU6050 drift. The GPIOs originally reserved for a front ultrasonic sensor were reassigned to front IR sensors (placed at the edges of the front face) to improve accuracy during entry/positioning in the parking area.
+
+- PID control strategy: Our robot relies on three operating modes:
+
+  - Lateral PID (conventional): Maintains a transversal setpoint (x or y) relative to the circuit’s straight walls. It is used in straight sections to align with a predetermined wall and thus remain as straight as possible.
+
+  - Pursuit PID (Pure Pursuit): Follows predefined paths (curved trajectories), useful in 90° turns, transitions, and alignments before key zones. In the code: pursuit_pid with getPurePursuitAngleError() and adjustable lookahead_dist.
+
+  - Special mode (no lateral PID or pursuit): Used only for parking entry/exit or specific maneuvers, relying exclusively on heading + front IR sensors.
+      
 - Paths:
 
 
