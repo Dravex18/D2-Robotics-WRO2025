@@ -235,12 +235,20 @@ Hay varios conceptos necesarios para entender el funcionamiento de nuestro robot
 
 - PID control strategy: Our robot relies on three operating modes:
 
-  - Lateral PID (conventional): Maintains a transversal setpoint (x or y) relative to the circuit’s straight walls. It is used in straight sections to align with a predetermined wall and thus remain as straight as possible.
+  - Lateral PID (conventional): Maintains a transversal setpoint (x or y) relative to the circuit’s straight walls. In this context, the offset refers to the distance between the robot and the outer wall, which is kept stable to ensure straight-line motion.
 
-  - Pursuit PID (Pure Pursuit): Follows predefined paths (curved trajectories), useful in 90° turns, transitions, and alignments before key zones. In the code: pursuit_pid with getPurePursuitAngleError() and adjustable lookahead_dist.
+  - Pursuit PID (Pure Pursuit): Controls the angular error toward a target point on a curved trajectory. Here, the angular error corresponds to the inclination of the robot’s front relative to the reference line of the path, ensuring the robot anticipates and smooths turns.
 
   - Special mode (no lateral PID or pursuit): Used only for parking entry/exit or specific maneuvers, relying exclusively on heading + front IR sensors.
-      
+    
+> **Note 🔔**  
+> Why 2 PIDs instead of 1?
+>   - Lateral PID controls the error with respect to a parallel straight line (keeping a stable lateral offset).
+>   - Pursuit PID controls the angular error toward a target point on a curved trajectory (anticipating and smoothing turns). 
+>     
+> A single “generic” PID tends to mix objectives (lateral vs. directional), degrading stability and response time, while forcing contradictory tuning. Keeping them separated ensures stability, clear gain assignment, and better performance.
+
+
 - Paths:
 
 
