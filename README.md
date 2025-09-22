@@ -137,11 +137,11 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
 
 ## 🧭 Direction System - Four Wheels Steering
 
-For the steering system, our decision was based on the requirements of the **Obstacle Challenge**. We anticipated the need for very tight turns, so we opted for **four-wheel steering**. This configuration allows for a greater turning angle and improved precision   when maneuvering.
+For the steering system, our decision was based on the requirements of the **Obstacle Challenge**. We anticipated the need for very tight turns, so we opted for **four-wheel steering**. This configuration allows for a greater turning angle and improved precision when maneuvering.
 
-We use **SG90 servo motors** due to their low cost and minimal power consumption.  
+We use **SG90 servo motor** due to their low cost and minimal power consumption.  
 
-We developed an **independent steering system for each axle** (front and rear), which enables tight maneuvers with the designed configuration and significantly reduces time on the track, as shown in the following image:
+We developed our own **steering system**, which enables tight maneuvers with the designed configuration and significantly reduces time on the track, as shown in the following image:
 
 <div align="center">
 
@@ -162,8 +162,8 @@ This solution allowed us to complete a fully functional and synchronized steerin
 
 ## 🔧 Traction System – 4WD
 
-For the traction system, we chose a **4WD configuration** (four-wheel drive), also known as a **4x4 system**. We believe this setup is more effective on the track, providing better grip and higher speed.
-We use **N20 motors** due to their practicality, speed, and lightweight design. To further enhance performance, we implemented **gears** to increase the robot's speed and a **shaft system** that transmits power to both the front and rear wheels.  
+For the traction system, we chose a **4WD configuration** (four-wheel drive), also known as a **4x4 system**. This setup is more effective on the track, providing better control at higher speed.
+We use **N20 motors** due to their size. To further enhance performance, we implemented **gears** to increase the robot's speed and a **shaft system** that transmits power to both the front and rear wheels.  
 This shaft is connected to a **custom differential**, which allows smoother and more controlled motion during turns by distributing power appropriately, regardless of the steering angle.
 
 Below is an image showcasing the full 4WD setup:
@@ -231,7 +231,7 @@ p<!--
 
 There are several concepts required to understand the operation of our robot; these concepts are mainly applied to the movement and positioning of our robot on the competition track.
 
-- Available distance sensing: Currently, we only use two lateral ultrasonic sensors, whose purpose is to compensate for MPU6050 drift. The GPIOs originally reserved for a front ultrasonic sensor were reassigned to front IR sensors (placed at the edges of the front face) to improve accuracy during entry/positioning in the parking area.
+- Distance sensing systems: Currently, we only use two lateral ultrasonic sensors. The GPIOs originally reserved for a front ultrasonic sensor were reassigned to front IR sensors (placed at the edges of the front face) to improve accuracy during entry/positioning in the parking area.
 
 - PID control strategy: Our robot relies on three operating modes.
 
