@@ -83,7 +83,7 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
   <tr>
     <td align="center"><img src="./OTHERS/Imagenes/pico.png" width="120"/></td>
     <td align="center"><img src="./OTHERS/Imagenes/pi zero2w.png" width="120"/></td>
-    <td align="center"><img src="./OTHERS/Imagenes/pi camer 3.jpg" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/pi camer 3.png" width="120"/></td>
   </tr>
   <tr>
     <td align="center"><a href="https://www.amazon.com/dp/B0BDLHMQ9C">🛒 Buy here!</a></td>
@@ -115,7 +115,7 @@ From custom-designed PCBs to 3D-printed parts and high-performance sensors, this
     <td align="center"><strong>3.7 V Steren Battery</strong></td>
   </tr>
   <tr>
-    <td align="center"><img src="./OTHERS/Imagenes/tb6612.jpg" width="120"/></td>
+    <td align="center"><img src="./OTHERS/Imagenes/tb6612.png" width="120"/></td>
     <td align="center"><img src="./OTHERS/Imagenes/mpu6050.png" width="120"/></td>
     <td align="center"><img src="./OTHERS/Imagenes/baterias.png" width="120"/></td>
   </tr>
