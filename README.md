@@ -226,7 +226,7 @@ This configuration ensures that all sensing elements operate consistently and ef
 ---
 # 🛣️ Rounds Strategy
 
-p<!--
+
 ## General information for all rounds
 
 There are several concepts required to understand the operation of our robot; these concepts are mainly applied to the movement and positioning of our robot on the competition track.
@@ -335,7 +335,37 @@ Finally, we count the number of pixels that match the red and green ranges, resp
 
 > **Note 🔔**  
 > You can view the complete source code of our project inside the [`SRC` ](https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/SRC/README.md#L145) folder.
--->
 
+# 🎥 Performance Video
 
+This video demonstrates the complete performance of our robot during the competition.
+It showcases the execution of key functionalities such as:
 
+- Precise lane tracking and curve navigation
+
+- Obstacle avoidance using sensor feedback
+
+- Dynamic path correction based on environment inputs
+
+- Color detection 
+
+📽️ Watch the videos:
+
+<table align="center">
+  <tr>
+    <th align="center">OPEN CHALLENGE</th>
+    <th align="center">OBSTACLE CHALLENGE</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=Ml1ZyXK22XI" target="_blank">
+        <img src="../OTHERS/Imagenes/open.gif" width="300%" alt="Open Challenge Video">
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.youtube.com/watch?v=BL7dXvtKBQE" target="_blank">
+        <img src="../OTHERS/Imagenes/OSTACLE.gif" width="300%" alt="Obstacle Challenge Video">
+      </a>
+    </td>
+  </tr>
+</table>
