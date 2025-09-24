@@ -260,8 +260,10 @@ There are several concepts required to understand the operation of our robot; th
 - Paths and the application of Pursuit: The Pursuit PID is used for approximately 15 predefined paths, including 90° turns, alignments, and lane adjustments at the end of straight sections. Both the `lookahead_dist` and the Pursuit gains are adapted depending on the path, for example, path 6 is specifically tuned for 90° turns.
   
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f25f3d3a-7837-4fdc-bc11-2cadcefc7e7a" width="45%">
-  <img src="https://github.com/user-attachments/assets/c113117e-2c7e-4a74-8df6-2a2738452664" width="45%">
+
+![Roi's](https://github.com/user-attachments/assets/956be34e-178c-45e7-b262-a00227d013a8)
+
+  
 </p>
 
 > **Note 🔔**  
