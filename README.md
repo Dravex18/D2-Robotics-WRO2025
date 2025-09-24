@@ -260,14 +260,12 @@ There are several concepts required to understand the operation of our robot; th
 - Paths and the application of Pursuit: The Pursuit PID is used for approximately 15 predefined paths, including 90° turns, alignments, and lane adjustments at the end of straight sections. Both the `lookahead_dist` and the Pursuit gains are adapted depending on the path, for example, path 6 is specifically tuned for 90° turns.
   
 <p align="center">
+  <img src="https://github.com/user-attachments/assets/2b6f4ba3-5d00-4bb3-90c4-cce0d09a8e47" width="500">
 
-![Roi's](https://github.com/user-attachments/assets/956be34e-178c-45e7-b262-a00227d013a8)
-
-  
 </p>
 
 > **Note 🔔**  
-> You can dowload yhe pyton fle to create paths by clicking [HERE](./SRC/paths.py)
+> You can dowload the python file to create paths by clicking [HERE](./SRC/paths.py)
 
 
 
@@ -312,8 +310,12 @@ To process the images, we decided to use OpenCV, as it provides both flexibility
 The following image illustrates the regions we used:
 
 <p align="center">
-<img width="487" height="249" alt="image" src="https://github.com/user-attachments/assets/08ce2727-bfe3-4ebc-87e0-d7fe9d3c5b71" />
+
+![Roi's](https://github.com/user-attachments/assets/956be34e-178c-45e7-b262-a00227d013a8)
+
+  
 </p>
+
 
 As can be observed, when exiting the parking slot there is a special case for each direction. If the direction is clockwise, the robot must process both Region A and Region B. To handle this simultaneously, we implemented multithreading. In total, three threads are used: two dedicated to image capture and one main thread. These threads run concurrently without interfering with one another, making this approach ideal for our situation.
 
