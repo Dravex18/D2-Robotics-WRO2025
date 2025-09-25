@@ -236,8 +236,8 @@ void loop() {
 }
 
 
-```
-</details>
+  ```
+  </details>
 
 # 🧱 OBSTACLE CHALLENGE
 
@@ -249,19 +249,18 @@ Due to the orientation of our robot, we inverted the captured image to correct i
 
 Additionally, we reduced the camera resolution (i.e., pixel count) to speed up image processing and enable faster response times.
 
-<details open>
-<summary>⚙️ Obtacle Challenge Main Code </summary>
 
-```cpp
-
-/************************************************************
  * PART 1 — MODULES & GLOBAL STATE
  * What: Load libraries, construct core objects (Robot, PID, Bounce),
  *       and declare all global variables for paths, pose, pins,
  *       timers, and control flags.
  * How: Keep configuration and runtime state in globals so helpers
  *       and the state machine can access them efficiently.
- ************************************************************/
+ 
+<details open>
+<summary>⚙️ Obtacle Challenge Main Code </summary>
+
+```cpp
 #include <Arduino.h>
 #include <Bounce2.h>
 #include <math.h> 
@@ -328,16 +327,20 @@ float lookahead_dist = 0.2;
 bool pursuit_done = false;
 bool pursuit_started = false;
 float x_start = 0, y_start = 0;
+```
+</details>
 
-
-/************************************************************
  * PART 2 — HELPERS (paths, pursuit, comms, layout, step tracking)
  * What: Pure helper functions that select paths, compute angle error,
- *       communicate with the Pi with timeout safety, fix lane layout,
- *       and manage step latching.
+ * communicate with the Pi with timeout safety, fix lane layout,
+ * and manage step latching.
  * How: Stateless logic where possible; when stateful, reset flags
- *       explicitly on path changes or step transitions.
- ************************************************************/
+ * explicitly on path changes or step transitions.
+ 
+<details open>
+<summary>⚙️ Obtacle Challenge Main Code </summary>
+  
+  ```cpp
 void updatePath(int index){
   currentPath = index;
   current_path_x = path_x[index];
@@ -447,15 +450,20 @@ void updateStep() {
         lastStep = step;                 // update tracker
     }
 }
+```
+</details>
 
-
-/************************************************************
  * PART 3 — SETUP (hardware init and startup handshake)
  * What: Initialize Serial1, robot, pins, and the debounced button;
- *       wait for the Pi to be ready, then signal ready.
+ * wait for the Pi to be ready, then signal ready.
  * How: Use begin()/attach()/interval(), perform a blocking wait
- *       with timeout safety before enabling motion.
- ************************************************************/
+ * with timeout safety before enabling motion.
+
+   
+<details open>
+<summary>⚙️ Obtacle Challenge Main Code </summary>
+  
+ ```cpp
 void setup() {
     Serial1.begin(115200);
     robot.begin();
@@ -470,16 +478,22 @@ void setup() {
     digitalWrite(builtinLed, HIGH);
  
 }
+```
+
+</details>
 
 
-/************************************************************
  * PART 4 — PERIODIC TASKS (inside loop: control + rectification)
  * What: Poll the button to toggle run/stop, update pose at high rate,
- *       compute steering via PID or Pursuit, and run rectification
- *       at a lower rate.
+ * compute steering via PID or Pursuit, and run rectification
+ *  at a lower rate.
  * How: Use two timers (interval, rectEveryMs) to separate fast
- *       controller updates from slower correction sampling.
- ************************************************************/
+ * controller updates from slower correction sampling.
+
+<details open>
+<summary>⚙️ Obtacle Challenge Main Code </summary>
+
+```cpp
 void loop() {
 
     unsigned long now = millis();
@@ -530,16 +544,21 @@ void loop() {
       }
     }
 
+```
+</details>
 
-/************************************************************
  * PART 5 — STATE MACHINE (steps 0–9)
  * What: Orchestrate the full navigation: initial zone, post-parking
- *       path, transitions, curve entry, 90° turn, auxiliary alignment,
- *       straights, last stretch, parking, and final stop.
+ * path, transitions, curve entry, 90° turn, auxiliary alignment,
+ * straights, last stretch, parking, and final stop.
  * How: Use 'step' and 'stepActivated[]' for on-enter actions and
- *       transition conditions based on pose, lanes, and sensors.
- ************************************************************/
+ * transition conditions based on pose, lanes, and sensors.
 
+
+<details open>
+<summary>⚙️ Obtacle Challenge Main Code </summary>
+
+```cpp
     // INITIAL ZONE
     if (step == 0) {   
         if (!stepActivated[step]) {
