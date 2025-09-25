@@ -432,20 +432,9 @@ It showcases the execution of key functionalities such as:
 📽️ Watch the videos:
 
 <table align="center">
-  <tr>
-    <th align="center">OPEN CHALLENGE</th>
-    <th align="center">OBSTACLE CHALLENGE</th>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="https://www.youtube.com/watch?v=Ml1ZyXK22XI" target="_blank">
-        <img src="../OTHERS/Imagenes/open.gif" width="300%" alt="Open Challenge Video">
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.youtube.com/watch?v=BL7dXvtKBQE" target="_blank">
-        <img src="../OTHERS/Imagenes/OSTACLE.gif" width="300%" alt="Obstacle Challenge Video">
-      </a>
-    </td>
-  </tr>
+  
+| <div align="center"><h2>OPEN CHALLENGE</h2></div> | <div align="center"><h2>OBSTACLE CHALLENGE</h2></div> |
+|---------------------------------------------------|--------------------------------------------------------|
+| <div align="center">[![Open Challenge Demo](OTHERS/Imagenes/open.gif)](https://www.youtube.com/watch?v=Ml1ZyXK22XI)</div> | <div align="center">[![Obstacle Challenge (YouTube)](OTHERS/Imagenes/OSTACLE.gif)](https://www.youtube.com/watch?v=-55twXkH_u8)</div> |
+
 </table>
