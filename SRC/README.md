@@ -239,6 +239,12 @@ void loop() {
   ```
   </details>
 
+> **Note 🔔**  
+> For an in-depth look at the General Codes, check out the General Codes folder by clicking [here](https://github.com/Dravex18/D2-Robotics-WRO2025/tree/main/SRC/General%20Codes).
+
+
+
+
 # 🧱 OBSTACLE CHALLENGE
 
 For the obstacle challenge round, we used the same mobility system as in the first round. The only difference is that we activated the camera to detect and classify obstacles.
@@ -473,6 +479,10 @@ void setup() {
 ```
 
 </details>
+
+> **Note 🔔**  
+> For an in-depth look at the Camera Codes, check out the Camera Codes folder by clicking [here](https://github.com/Dravex18/D2-Robotics-WRO2025/tree/main/SRC/Camera%20Codes).
+> 
 
 
 ### PERIODIC TASKS (inside loop: control + rectification)
