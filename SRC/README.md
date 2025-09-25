@@ -6,7 +6,8 @@
 ### Here you’ll find the complete codebase used to tackle and complete the competition challenges.  
 ### This includes everything from sensor handling and motor control to autonomous navigation and decision-making logic.
 
-
+> **Note 🔔**  
+>For a proper understanding of the code, please refer to the custom libraries we developed, which are attached above.
 
 # 🚀 OPEN CHALLENGE CODE
 
