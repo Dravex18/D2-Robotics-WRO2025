@@ -250,13 +250,11 @@ Due to the orientation of our robot, we inverted the captured image to correct i
 Additionally, we reduced the camera resolution (i.e., pixel count) to speed up image processing and enable faster response times.
 
 
- * PART 1 — MODULES & GLOBAL STATE
- * What: Load libraries, construct core objects (Robot, PID, Bounce),
- *       and declare all global variables for paths, pose, pins,
- *       timers, and control flags.
- * How: Keep configuration and runtime state in globals so helpers
- *       and the state machine can access them efficiently.
- 
+### MODULES & GLOBAL STATE
+
+In this section, helper functions are implemented to handle essential tasks such as selecting the path to follow, calculating angular error for steering, ensuring safe communication with the Raspberry Pi through timeout mechanisms, correcting the lane layout, and managing step latching. The goal is to keep these functions as independent as possible, operating only on their inputs without relying on hidden states, which makes them more predictable and reusable. In cases where maintaining state is unavoidable, such as using flags for path changes or step transitions, explicit resets are introduced to prevent previous errors from affecting the operation. This approach achieves a balance between simplicity, reliability, and precise control of the system.
+
+
 <details open>
 <summary>⚙️ Obtacle Challenge Main Code </summary>
 
@@ -330,12 +328,9 @@ float x_start = 0, y_start = 0;
 ```
 </details>
 
- * PART 2 — HELPERS (paths, pursuit, comms, layout, step tracking)
- * What: Pure helper functions that select paths, compute angle error,
- * communicate with the Pi with timeout safety, fix lane layout,
- * and manage step latching.
- * How: Stateless logic where possible; when stateful, reset flags
- * explicitly on path changes or step transitions.
+### HELPERS (paths, pursuit, comms, layout, step tracking)
+
+In this section, helper functions are implemented to handle essential tasks such as selecting the path to follow, calculating angular error for steering, ensuring safe communication with the Raspberry Pi through timeout mechanisms, correcting the lane layout, and managing step latching. The goal is to keep these functions as independent as possible, operating only on their inputs without relying on hidden states, which makes them more predictable and reusable. In cases where maintaining state is unavoidable, such as using flags for path changes or step transitions, explicit resets are introduced to prevent previous errors from affecting the operation. This approach achieves a balance between simplicity, reliability, and precise control of the system.
  
 <details open>
 <summary>⚙️ Obtacle Challenge Main Code </summary>
@@ -453,12 +448,9 @@ void updateStep() {
 ```
 </details>
 
- * PART 3 — SETUP (hardware init and startup handshake)
- * What: Initialize Serial1, robot, pins, and the debounced button;
- * wait for the Pi to be ready, then signal ready.
- * How: Use begin()/attach()/interval(), perform a blocking wait
- * with timeout safety before enabling motion.
+### SETUP (hardware init and startup handshake)
 
+In this section, the system sets up the essential hardware interfaces by initializing Serial1, the robot object, pin configurations, and the debounced button. Once the basic components are prepared, the program waits for the Raspberry Pi to signal that it is ready, ensuring proper synchronization between devices. Only after receiving this confirmation does the robot respond by sending its own ready signal. This process relies on functions like begin(), attach(), and interval() to configure serial communication, input handling, and timing. A blocking wait with built-in timeout protection is used during the handshake phase, guaranteeing that the robot does not begin motion until communication is established safely, preventing misalignment or unsafe startup conditions.
    
 <details open>
 <summary>⚙️ Obtacle Challenge Main Code </summary>
@@ -483,12 +475,8 @@ void setup() {
 </details>
 
 
- * PART 4 — PERIODIC TASKS (inside loop: control + rectification)
- * What: Poll the button to toggle run/stop, update pose at high rate,
- * compute steering via PID or Pursuit, and run rectification
- *  at a lower rate.
- * How: Use two timers (interval, rectEveryMs) to separate fast
- * controller updates from slower correction sampling.
+### PERIODIC TASKS (inside loop: control + rectification)
+In this section, the system sets up the essential hardware interfaces by initializing Serial1, the robot object, pin configurations, and the debounced button. Once the basic components are prepared, the program waits for the Raspberry Pi to signal that it is ready, ensuring proper synchronization between devices. Only after receiving this confirmation does the robot respond by sending its own ready signal. This process relies on functions like begin(), attach(), and interval() to configure serial communication, input handling, and timing. A blocking wait with built-in timeout protection is used during the handshake phase, guaranteeing that the robot does not begin motion until communication is established safely, preventing misalignment or unsafe startup conditions.
 
 <details open>
 <summary>⚙️ Obtacle Challenge Main Code </summary>
@@ -547,12 +535,8 @@ void loop() {
 ```
 </details>
 
- * PART 5 — STATE MACHINE (steps 0–9)
- * What: Orchestrate the full navigation: initial zone, post-parking
- * path, transitions, curve entry, 90° turn, auxiliary alignment,
- * straights, last stretch, parking, and final stop.
- * How: Use 'step' and 'stepActivated[]' for on-enter actions and
- * transition conditions based on pose, lanes, and sensors.
+### STATE MACHINE (steps 0–9)
+In this stage, the system continuously monitors the button input to toggle between run and stop modes, updates the robot’s pose at a high frequency, calculates steering commands using either a PID controller or Pursuit algorithm, and executes rectification routines at a slower pace. To manage these different tasks efficiently, two timers are employed: one (interval) dedicated to fast control loop updates for smooth and responsive motion, and another (rectEveryMs) that handles slower correction sampling without interfering with the main control flow. This separation of timing ensures that critical control updates happen with minimal delay, while background corrections run at a sustainable rate, maintaining both stability and efficiency in the robot’s overall behavior.
 
 
 <details open>
