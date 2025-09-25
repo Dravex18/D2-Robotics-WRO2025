@@ -143,21 +143,36 @@ We use **SG90 servo motor** due to their low cost and minimal power consumption.
 
 We developed our own **steering system**, which enables tight maneuvers with the designed configuration and significantly reduces time on the track, as shown in the following image:
 
-<div align="center">
+<table align="center">
+  <tr>
+    <td align="center">
+      <h2>Steering System</h2> 
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="449" height="201" alt="Screenshot 2025-07-15 205336" src="https://github.com/user-attachments/assets/eede3cab-a019-464b-a151-1f4c20013af0" />
+    </td>
+  </tr>
+</table>
 
-<img width="449" height="201" alt="Screenshot 2025-07-15 205336" src="https://github.com/user-attachments/assets/eede3cab-a019-464b-a151-1f4c20013af0" />
 
-</div>
 
 Since both axles are steerable, we needed to ensure that the **front axle turns in the opposite direction to the rear axle**, and vice versa.  
 To achieve this, we implemented a **basic four-gear system**, as shown in the image below.  
 This solution allowed us to complete a fully functional and synchronized steering system for the robot.
 
-<div align="center">
+<table align="center">
+  <tr>
+    <td align="center"><b>Fila 1 - Col 1</b></td>
+    <img src="https://github.com/user-attachments/assets/e3dc1a8e-3320-4297-9118-86c2c88e4430" width="450" height="350">
+  </tr>
+  <tr>
+    <td align="center">Fila 2 - Col 1</td>
+    <img src="https://github.com/user-attachments/assets/46b94a1c-3623-486b-837a-a4b717c23469" width="500" height="800">
+  </tr>
+</table>
 
-<img src="https://github.com/user-attachments/assets/e3dc1a8e-3320-4297-9118-86c2c88e4430" width="450" height="350">  <img src="https://github.com/user-attachments/assets/46b94a1c-3623-486b-837a-a4b717c23469" width="500" height="800">
-
-</div>
 
 
 ## 🔧 Traction System – 4WD
@@ -168,11 +183,21 @@ This shaft is connected to a **custom differential**, which allows smoother and 
 
 Below is an image showcasing the full 4WD setup:
 
-<div align="center">
+<table align="center">
+  <tr>
+    <td align="center">
+      <h2>Robot 4WD System</h2> 
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/c0fed424-c513-4c63-b985-9cb551a16fe3" width="450" height="400">
+    </td>
+  </tr>
+</table>
 
-<img src="https://github.com/user-attachments/assets/c0fed424-c513-4c63-b985-9cb551a16fe3" width="450" height="400">
 
-</div>
+
 
 However, having both steering and traction on all four wheels introduced a major challenge:  
 **How to maintain traction while the robot is turning**.
@@ -182,11 +207,22 @@ This system ensures continuous traction even during sharp turns, greatly improvi
 
 Below, we present an image of the implemented system:
 
-<div align="center">
+<table align="center">
+  <tr>
+    <td align="center">
+      <h2>Traction Distribution via Custom Differential Mechanism</h2> 
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/b96fd7d2-7241-4940-b722-c8c9533b87b5" width="450" height="400">
+    </td>
+  </tr>
+</table>
 
-<img src="https://github.com/user-attachments/assets/b96fd7d2-7241-4940-b722-c8c9533b87b5" width="450" height="400">
 
-</div>
+
+
 
 > **Note 🔔**  
 > We encourage you to visit the `MODEL` folder, where you can download the robot’s 3D design [here](./MODEL), and check the `V-PHOTOS` folder to view images of the robot [here](./V-PHOTOS).
@@ -259,10 +295,18 @@ There are several concepts required to understand the operation of our robot; th
 
 - Paths and the application of Pursuit: The Pursuit PID is used for approximately 15 predefined paths, including 90° turns, alignments, and lane adjustments at the end of straight sections. Both the `lookahead_dist` and the Pursuit gains are adapted depending on the path, for example, path 6 is specifically tuned for 90° turns.
   
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/2b6f4ba3-5d00-4bb3-90c4-cce0d09a8e47" width="500">
-
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <h2>Path Example</h2> 
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/2b6f4ba3-5d00-4bb3-90c4-cce0d09a8e47" width="500">
+    </td>
+  </tr>
+</table>
 
 > **Note 🔔**  
 > You can dowload the python file to create paths by clicking [HERE](./SRC/paths.py)
@@ -294,6 +338,25 @@ Once the robot completed 11 full sections, the program automatically recognized 
 
 
 
+<p align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <h2>First Round Strategy</h2> 
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img width="400" height="400" alt="Screenshot fila 1" src="https://github.com/user-attachments/assets/5abecb89-4728-454d-8de4-153491426109" />
+      </td>
+    </tr>
+    <tr>
+      <td align="left">
+        Lines colors: 🔴 Normal PID: Classic proportional–integral–derivative control.🟢 PID pursuit: Variant with tracking logic (pure pursuit).
+      </td>
+    </tr>
+  </table>
+</p>
 
 
 
