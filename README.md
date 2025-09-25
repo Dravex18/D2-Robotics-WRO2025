@@ -164,14 +164,19 @@ This solution allowed us to complete a fully functional and synchronized steerin
 
 <table align="center">
   <tr>
-    <td align="center"><b>Fila 1 - Col 1</b></td>
-    <img src="https://github.com/user-attachments/assets/e3dc1a8e-3320-4297-9118-86c2c88e4430" width="450" height="350">
-  </tr>
-  <tr>
-    <td align="center">Fila 2 - Col 1</td>
-    <img src="https://github.com/user-attachments/assets/46b94a1c-3623-486b-837a-a4b717c23469" width="500" height="800">
+    <!-- Columna izquierda -->
+    <td align="center">
+      <h2>Robot View</h2><br>
+      <img src="https://github.com/user-attachments/assets/e3dc1a8e-3320-4297-9118-86c2c88e4430" width="300" height="200">
+    </td>
+    <!-- Columna derecha -->
+    <td align="center">
+      <h2>4-Wheel Steering System</h2><br>
+      <img src="https://github.com/user-attachments/assets/46b94a1c-3623-486b-837a-a4b717c23469" width="300" height="200">
+    </td>
   </tr>
 </table>
+
 
 
 
