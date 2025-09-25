@@ -377,12 +377,20 @@ To process the images, we decided to use OpenCV, as it provides both flexibility
 
 The following image illustrates the regions we used:
 
-<p align="center">
-
-![Roi's](https://github.com/user-attachments/assets/956be34e-178c-45e7-b262-a00227d013a8)
-
-  
-</p>
+<table align="center">
+  <tr>
+    <!-- Columna izquierda -->
+    <td align="center">
+      <h2>Clockwise</h2><br>
+      <img width="727" height="725" alt="Screenshot 2025-09-24 193034" src="https://github.com/user-attachments/assets/5b672c4d-a8da-4460-83fe-db2d7394853f" />
+    </td>
+    <!-- Columna derecha -->
+    <td align="center">
+      <h2>Counter Clockwise</h2><br>
+      <img width="733" height="730" alt="Screenshot 2025-09-24 193051" src="https://github.com/user-attachments/assets/ac41cf63-0c83-42ca-9300-c76da20bf993" />
+    </td>
+  </tr>
+</table>
 
 
 As can be observed, when exiting the parking slot there is a special case for each direction. If the direction is clockwise, the robot must process both Region A and Region B. To handle this simultaneously, we implemented multithreading. In total, three threads are used: two dedicated to image capture and one main thread. These threads run concurrently without interfering with one another, making this approach ideal for our situation.
