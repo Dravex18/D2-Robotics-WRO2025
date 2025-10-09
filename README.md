@@ -435,6 +435,6 @@ It showcases the execution of key functionalities such as:
   
 | <div align="center"><h2>OPEN CHALLENGE</h2></div> | <div align="center"><h2>OBSTACLE CHALLENGE</h2></div> |
 |---------------------------------------------------|--------------------------------------------------------|
-| <div align="center">[![Open Challenge Demo](OTHERS/Imagenes/open.gif)](https://www.youtube.com/watch?v=Ml1ZyXK22XI)</div> | <div align="center">[![Obstacle Challenge (YouTube)](OTHERS/Imagenes/OSTACLE.gif)](https://www.youtube.com/watch?v=-55twXkH_u8)</div> |
+| <div align="center">[![Open Challenge Demo](OTHERS/Imagenes/open.gif)](https://www.youtube.com/watch?v=Ml1ZyXK22XI)</div> | <div align="center">[![Obstacle Challenge (YouTube)](OTHERS/Imagenes/OSTACLE.gif)]([https://www.youtube.com/watch?v=-55twXkH_u8](https://youtu.be/F21w0Q2Il1I))</div> |
 
 </table>
