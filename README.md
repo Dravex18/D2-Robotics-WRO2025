@@ -10,7 +10,7 @@
 
 
 
-Welcome to the official repository of Team D2Robotics, a dedicated group of young engineers working to earn the opportunity to represent Panama at the World Robot Olympiad 2025, which will take place in Singapore. We are currently competing in the Future Engineers category and preparing for the national qualifiers with the goal of securing our spot on the international stage.
+Welcome to the official repository of Team D2Robotics, a dedicated group of young engineers working to earn the opportunity to represent Panama at the World Robot Olympiad 2025, which will take place in Singapore. We are currently competing in the Future Engineers category and this is our repository for the Americas Open Championship, that will take place in Panama.
 
 This repository contains all the code, documentation, and development resources related to our project.
 </div>
