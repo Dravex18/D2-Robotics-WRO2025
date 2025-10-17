@@ -272,8 +272,8 @@ This configuration ensures that all sensing elements operate consistently and ef
 
 There are several concepts required to understand the operation of our robot; these concepts are mainly applied to the movement and positioning of our robot on the competition track.
 
-- Distance sensing systems: Currently, we only use two lateral ultrasonic sensors. The GPIOs originally reserved for a front ultrasonic sensor were reassigned to front IR sensors (placed at the edges of the front face) to improve accuracy during entry/positioning in the parking area.
-
+- Distance sensing systems: Currently, we use three ultrasonic sensor, two lateral sensors and one frontal sensor. The front ultrasonic sensor is used to update the y position at the beginning of the round, and the laterals are used to update the x position. We use rustic front IR sensors (placed at the edges of the front face) to improve accuracy during entry and positioning in the parking area.
+  
 - PID control strategy: Our robot relies on three operating modes.
 
   - Lateral PID (conventional): Maintains a transversal setpoint (x or y) relative to the circuit’s straight walls. In this context, the offset refers to the distance between the robot and the outer wall, which is kept stable to ensure straight-line motion.
