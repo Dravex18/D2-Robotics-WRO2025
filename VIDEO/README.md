@@ -16,21 +16,11 @@ It showcases the execution of key functionalities such as:
 📽️ Watch the videos:
 
 <table align="center">
-  <tr>
-    <th><h2 align="center">OPEN CHALLENGE</h2></th>
-    <th><h2 align="center">OBSTACLE CHALLENGE</h2></th>
-  </tr>
-  <tr>
-    <td align="center">
-      <a href="https://www.youtube.com/watch?v=Ml1ZyXK22XI">
-        <img src="https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/OTHERS/Imagenes/open.gif?raw=true" alt="Open Challenge Demo" width="100%">
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.youtube.com/watch?v=-55twXkH_u8">
-        <img src="https://github.com/Dravex18/D2-Robotics-WRO2025/blob/main/OTHERS/Imagenes/OSTACLE.gif?raw=true" alt="Obstacle Challenge Demo" width="100%">
-      </a>
-    </td>
-  </tr>
+  
+| <div align="center"><h2>OPEN CHALLENGE</h2></div> | <div align="center"><h2>OBSTACLE CHALLENGE</h2></div> |
+|---------------------------------------------------|--------------------------------------------------------|
+| <div align="center"><a href="https://www.youtube.com/watch?v=Ml1ZyXK22XI"><img src="OTHERS/Imagenes/open.gif" alt="Open Challenge Demo"></a></div> | <div align="center"><a href="https://youtu.be/F21w0Q2Il1I"><img src="OTHERS/Imagenes/OSTACLE.gif" alt="Obstacle Challenge (YouTube)"></a></div> |
+
+
 </table>
 
