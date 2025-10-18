@@ -8,14 +8,51 @@
 
 
 
-| ◀️ Left View | ▶️ Right View |
-|--------------|---------------|
-| <img width="320" height="320" alt="left-Photoroom" src="https://github.com/user-attachments/assets/d6064d1f-dd1b-4a64-9a51-9696df062854" /> | <img width="320" height="320" alt="right-Photoroom" src="https://github.com/user-attachments/assets/2c69e1e2-786a-4315-81a0-98365717dbbb" /> | 
+<table align="center">
+  <tr>
+    <th>◀️ Left View</th>
+    <th>▶️ Right View</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="320" height="320" alt="left-Photoroom" src="https://github.com/user-attachments/assets/d6064d1f-dd1b-4a64-9a51-9696df062854" />
+    </td>
+    <td align="center">
+      <img width="320" height="320" alt="right-Photoroom" src="https://github.com/user-attachments/assets/2c69e1e2-786a-4315-81a0-98365717dbbb" />
+    </td>
+  </tr>
+</table>
 
-| 🔼 Top View | 🔽 Bottom View |
-|------------|----------------|
-| <img width="320" height="320" alt="up-Photoroom" src="https://github.com/user-attachments/assets/8a5515a9-4892-4147-8904-b39eeb275b47" /> | <img width="320" height="320" alt="down-Photoroom" src="https://github.com/user-attachments/assets/ed5db64e-add5-44eb-a3c4-ba8f46b154cd" /> |
+<br>
 
-| 🔳 Front View | 🔲 Back View |
-|---------------|--------------|
-| <img width="320" height="320" alt="front-Photoroom" src="https://github.com/user-attachments/assets/b4a91d2e-e09c-48fa-91ab-17d303ff7072" /> | <img width="320" height="320" alt="back-Photoroom" src="https://github.com/user-attachments/assets/56e473ab-f7be-4a81-8768-38e3c271ef16" /> |
+<table align="center">
+  <tr>
+    <th>🔼 Top View</th>
+    <th>🔽 Bottom View</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="320" height="320" alt="up-Photoroom" src="https://github.com/user-attachments/assets/8a5515a9-4892-4147-8904-b39eeb275b47" />
+    </td>
+    <td align="center">
+      <img width="320" height="320" alt="down-Photoroom" src="https://github.com/user-attachments/assets/ed5db64e-add5-44eb-a3c4-ba8f46b154cd" />
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<table align="center">
+  <tr>
+    <th>🔳 Front View</th>
+    <th>🔲 Back View</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="320" height="320" alt="front-Photoroom" src="https://github.com/user-attachments/assets/b4a91d2e-e09c-48fa-91ab-17d303ff7072" />
+    </td>
+    <td align="center">
+      <img width="320" height="320" alt="back-Photoroom" src="https://github.com/user-attachments/assets/56e473ab-f7be-4a81-8768-38e3c271ef16" />
+    </td>
+  </tr>
+</table>
